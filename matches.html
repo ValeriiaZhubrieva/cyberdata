@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230613215823">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230614222120">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,34 +29,38 @@
 								</svg>
 							</button>
 						</div>
-						<div class="search-block__possible possible-search">
-							<a href="#" class="possible-search__item possible-search__players">
-								<div class="possible-search__info">
-									<div class="possible-search__img">
-										<picture><source srcset="img/header/photo-players.webp" type="image/webp"><img src="img/header/photo-players.jpg" alt="photo player"></picture>
+						<ul class="search-block__possible possible-search">
+							<li>
+								<a href="#" class="possible-search__item possible-search__players">
+									<div class="possible-search__info">
+										<div class="possible-search__img">
+											<picture><source srcset="img/header/photo-players.webp" type="image/webp"><img src="img/header/photo-players.jpg" alt="photo player"></picture>
+										</div>
+										<div class="possible-search__name">
+											Puppey
+										</div>
 									</div>
-									<div class="possible-search__name">
-										Puppey
+									<div class="possible-search__category">
+										Гравці
 									</div>
-								</div>
-								<div class="possible-search__category">
-									Гравці
-								</div>
-							</a>
-							<a href="#" class="possible-search__item possible-search__teams">
-								<div class="possible-search__info">
-									<div class="possible-search__img">
-										<picture><source srcset="img/header/photo-team.webp" type="image/webp"><img src="img/header/photo-team.jpg" alt="photo team"></picture>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="possible-search__item possible-search__teams">
+									<div class="possible-search__info">
+										<div class="possible-search__img">
+											<picture><source srcset="img/header/photo-team.webp" type="image/webp"><img src="img/header/photo-team.jpg" alt="photo team"></picture>
+										</div>
+										<div class="possible-search__name">
+											TEAM SECRET
+										</div>
 									</div>
-									<div class="possible-search__name">
-										TEAM SECRET
+									<div class="possible-search__category">
+										Команди
 									</div>
-								</div>
-								<div class="possible-search__category">
-									Команди
-								</div>
-							</a>
-						</div>
+								</a>
+							</li>
+						</ul>
 					</div>
 					<div class="header__actives">
 						<div class="header__lang lang-block">
@@ -113,23 +117,25 @@
 					</div>
 					<div class="matches__body">
 						<aside class="matches__aside aside-filter">
-							<div data-spollers="768" class="spollers">
+							<div data-spollers="1100" class="spollers">
 								<details class="spollers__item">
 									<summary class="spollers__title">
-										Всі матчі
+										<span>Всі матчі</span>
 										<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
 										</svg>
 									</summary>
 									<div class="spollers__body">
-										<div class="aside-filter__inner">
+										<div data-da=".aside-filter, 1100" class="aside-filter__inner aside-filter__inner-near">
 											<h4 class="aside-filter__title">
 												Додаткові фільтри
 											</h4>
 											<div class="checkbox">
 												<input id="c_11" class="checkbox__input" type="checkbox" value="11" name="">
 												<label for="c_11" class="checkbox__label">
-													<span class="checkbox__text">Найближчі матчі</span>
+													<span class="checkbox__text">Найближчі
+														<span class="checkbox__text-hidden">матчі</span>
+													</span>
 												</label>
 											</div>
 										</div>
@@ -1523,7 +1529,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230613215823"></script>
+	<script src="js/app.min.js?_v=20230614222120"></script>
 </body>
 
 </html>

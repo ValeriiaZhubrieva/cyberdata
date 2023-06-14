@@ -3633,15 +3633,90 @@
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
-    let addWindowScrollEvent = false;
-    setTimeout((() => {
-        if (addWindowScrollEvent) {
-            let windowScroll = new Event("windowScroll");
-            window.addEventListener("scroll", (function(e) {
-                document.dispatchEvent(windowScroll);
+    class DynamicAdapt {
+        constructor(type) {
+            this.type = type;
+        }
+        init() {
+            this.оbjects = [];
+            this.daClassname = "_dynamic_adapt_";
+            this.nodes = [ ...document.querySelectorAll("[data-da]") ];
+            this.nodes.forEach((node => {
+                const data = node.dataset.da.trim();
+                const dataArray = data.split(",");
+                const оbject = {};
+                оbject.element = node;
+                оbject.parent = node.parentNode;
+                оbject.destination = document.querySelector(`${dataArray[0].trim()}`);
+                оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+                оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+                оbject.index = this.indexInParent(оbject.parent, оbject.element);
+                this.оbjects.push(оbject);
+            }));
+            this.arraySort(this.оbjects);
+            this.mediaQueries = this.оbjects.map((({breakpoint}) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`)).filter(((item, index, self) => self.indexOf(item) === index));
+            this.mediaQueries.forEach((media => {
+                const mediaSplit = media.split(",");
+                const matchMedia = window.matchMedia(mediaSplit[0]);
+                const mediaBreakpoint = mediaSplit[1];
+                const оbjectsFilter = this.оbjects.filter((({breakpoint}) => breakpoint === mediaBreakpoint));
+                matchMedia.addEventListener("change", (() => {
+                    this.mediaHandler(matchMedia, оbjectsFilter);
+                }));
+                this.mediaHandler(matchMedia, оbjectsFilter);
             }));
         }
-    }), 0);
+        mediaHandler(matchMedia, оbjects) {
+            if (matchMedia.matches) оbjects.forEach((оbject => {
+                this.moveTo(оbject.place, оbject.element, оbject.destination);
+            })); else оbjects.forEach((({parent, element, index}) => {
+                if (element.classList.contains(this.daClassname)) this.moveBack(parent, element, index);
+            }));
+        }
+        moveTo(place, element, destination) {
+            element.classList.add(this.daClassname);
+            if (place === "last" || place >= destination.children.length) {
+                destination.append(element);
+                return;
+            }
+            if (place === "first") {
+                destination.prepend(element);
+                return;
+            }
+            destination.children[place].before(element);
+        }
+        moveBack(parent, element, index) {
+            element.classList.remove(this.daClassname);
+            if (parent.children[index] !== void 0) parent.children[index].before(element); else parent.append(element);
+        }
+        indexInParent(parent, element) {
+            return [ ...parent.children ].indexOf(element);
+        }
+        arraySort(arr) {
+            if (this.type === "min") arr.sort(((a, b) => {
+                if (a.breakpoint === b.breakpoint) {
+                    if (a.place === b.place) return 0;
+                    if (a.place === "first" || b.place === "last") return -1;
+                    if (a.place === "last" || b.place === "first") return 1;
+                    return 0;
+                }
+                return a.breakpoint - b.breakpoint;
+            })); else {
+                arr.sort(((a, b) => {
+                    if (a.breakpoint === b.breakpoint) {
+                        if (a.place === b.place) return 0;
+                        if (a.place === "first" || b.place === "last") return 1;
+                        if (a.place === "last" || b.place === "first") return -1;
+                        return 0;
+                    }
+                    return b.breakpoint - a.breakpoint;
+                }));
+                return;
+            }
+        }
+    }
+    const da = new DynamicAdapt("max");
+    da.init();
     if (document.querySelector(".search-block")) {
         const searchBlock = document.querySelector(".search-block");
         const searchBlockInput = searchBlock.querySelector(".search-block__input");
@@ -3657,20 +3732,12 @@
         if (targetElement.closest(".lang-block")) document.querySelector(".lang-block").classList.toggle("active");
         if (!targetElement.closest(".lang-block")) document.querySelector(".lang-block").classList.remove("active");
     }));
-    const timelineCalendarBody = document.querySelectorAll(".timeline-calendar__body");
-    function scrollingBlock(params) {
-        if (params) params.addEventListener("wheel", (function(event) {
-            let modifier;
-            if (event.deltaMode == event.DOM_DELTA_PIXEL) modifier = 1; else if (event.deltaMode == event.DOM_DELTA_LINE) modifier = parseInt(getComputedStyle(this).lineHeight); else if (event.deltaMode == event.DOM_DELTA_PAGE) modifier = this.clientHeight;
-            if (event.deltaY != 0) {
-                this.scrollLeft += modifier * event.deltaY;
-                event.preventDefault();
-            }
+    if (document.querySelector(".aside-filter__inner-near")) {
+        const checkboxNear = document.getElementById("c_11");
+        checkboxNear.addEventListener("change", (() => {
+            if (checkboxNear.checked) document.querySelector(".aside-filter__inner-near").classList.add("active"); else document.querySelector(".aside-filter__inner-near").classList.remove("active");
         }));
     }
-    timelineCalendarBody.forEach((item => {
-        scrollingBlock(item);
-    }));
     window["FLS"] = false;
     isWebp();
     spollers();
