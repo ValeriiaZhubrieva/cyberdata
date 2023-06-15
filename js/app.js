@@ -3738,7 +3738,6 @@
             if (checkboxNear.checked) document.querySelector(".aside-filter__inner-near").classList.add("active"); else document.querySelector(".aside-filter__inner-near").classList.remove("active");
         }));
     }
-    window["FLS"] = false;
     isWebp();
     spollers();
 })();

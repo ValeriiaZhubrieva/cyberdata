@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<title>Команди</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230615180651">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="#" class="header__logo">
+						<img src="img/logo.svg" alt="logo cyberdata.pro">
+					</a>
+					<div class="header__search search-block">
+						<div class="search-block__body">
+							<input autocomplete="off" type="text" name="search" placeholder="Наприклад Puppey" class="search-block__input">
+							<button type="button" class="search-block__btn">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16.25 16.25L12.5 12.5M1.75 8C1.75 4.54822 4.54822 1.75 8 1.75C11.4518 1.75 14.25 4.54822 14.25 8C14.25 11.4518 11.4518 14.25 8 14.25C4.54822 14.25 1.75 11.4518 1.75 8Z" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+						<ul class="search-block__possible possible-search">
+							<li>
+								<a href="#" class="possible-search__item possible-search__players">
+									<div class="possible-search__info">
+										<div class="possible-search__img">
+											<picture><source srcset="img/header/photo-players.webp" type="image/webp"><img src="img/header/photo-players.jpg" alt="photo player"></picture>
+										</div>
+										<div class="possible-search__name">
+											Puppey
+										</div>
+									</div>
+									<div class="possible-search__category">
+										Гравці
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="possible-search__item possible-search__teams">
+									<div class="possible-search__info">
+										<div class="possible-search__img">
+											<picture><source srcset="img/header/photo-team.webp" type="image/webp"><img src="img/header/photo-team.jpg" alt="photo team"></picture>
+										</div>
+										<div class="possible-search__name">
+											TEAM SECRET
+										</div>
+									</div>
+									<div class="possible-search__category">
+										Команди
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header__actives">
+						<div class="header__lang lang-block">
+							<div class="lang-block__lang">
+								<img src="img/header/ua-flag.svg" alt="ua flag">
+							</div>
+							<ul class="lang-block__dropdown">
+								<li class="lang-block__item">
+									<a href="#" class="lang-block__link">
+										<img src="img/header/uk-flag.svg" alt="uk flag">
+									</a>
+								</li>
+								<li class="lang-block__item">
+									<a href="#" class="lang-block__link">
+										<img src="img/header/flag.svg" alt="flag">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="header__dota">
+							Dota 2
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page__teams">
+			<div class="teams__breadcrumbs breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.6237 16.0419H14.3737C15.2942 16.0419 16.0404 15.2957 16.0404 14.3752V8.1252L9.9987 3.95853L3.95703 8.1252V14.3752C3.95703 15.2957 4.70322 16.0419 5.6237 16.0419Z" stroke="#919191" stroke-opacity="0.568627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M8.12319 13.1244C8.12319 12.2039 8.86938 11.4577 9.78986 11.4577H10.2065C11.127 11.4577 11.8732 12.2039 11.8732 13.1244V16.0411H8.12319V13.1244Z" stroke="#919191" stroke-opacity="0.568627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__span">Команди</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section class="teams">
+				<div class="teams__container">
+					<div class="teams__head">
+						<h2 class="teams__title title">
+							Команди
+						</h2>
+						<div class="teams__text text">
+							Список всіх команд
+						</div>
+					</div>
+					<div class="teams__body">
+						<aside class="teams__aside aside-filter">
+							<div data-spollers="1100" class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										<span>Всі Команди</span>
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+									</summary>
+									<div class="spollers__body">
+										<div class="aside-filter__inner">
+											<h4 class="aside-filter__title">
+												Регіон
+											</h4>
+											<div class="checkbox">
+												<input id="c_12" class="checkbox__input" type="checkbox" value="1" name="">
+												<label for="c_12" class="checkbox__label">
+													<span class="checkbox__text">Східна Європа</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_13" class="checkbox__input" type="checkbox" value="2" name="">
+												<label for="c_13" class="checkbox__label">
+													<span class="checkbox__text">Західна Європа</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_14" class="checkbox__input" type="checkbox" value="3" name="">
+												<label for="c_14" class="checkbox__label">
+													<span class="checkbox__text">Північна Америка</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_15" class="checkbox__input" type="checkbox" value="4" name="">
+												<label for="c_15" class="checkbox__label">
+													<span class="checkbox__text">Південна Америка</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_16" class="checkbox__input" type="checkbox" value="5" name="">
+												<label for="c_16" class="checkbox__label">
+													<span class="checkbox__text">Китай</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_17" class="checkbox__input" type="checkbox" value="6" name="">
+												<label for="c_17" class="checkbox__label">
+													<span class="checkbox__text">Південно-Східна Азія</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</details>
+							</div>
+						</aside>
+						<div class="teams__content">
+							<div class="teams__inner">
+								<div class="teams__table-top">
+									<div class="teams__top-text">
+										Event
+									</div>
+									<div class="teams__top-text">
+										Країна
+									</div>
+									<div class="teams__top-text">
+										Сума призових
+									</div>
+									<div class="teams__top-text">
+										ВІНРЕЙТ
+									</div>
+									<div class="teams__top-text">
+										DPC очки
+									</div>
+								</div>
+								<div class="teams__items">
+									<a href="#" class="teams__item table-team">
+										<div class="table-team__item table-team__team">
+											<div class="table-team__img">
+												<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+											</div>
+											<div class="table-team__name">
+												TEAM LIQUID
+											</div>
+											<div class="table-team__country">
+												<div class="table-team__flag">
+													<img src="img/match/flag-nd.svg" alt="flag-nd">
+												</div>
+												<span>
+													Нідерланди
+											</div>
+											<div class="table-team__players">
+												<div class="table-team__player">
+													iNSaNiA
+												</div>
+												<div class="table-team__player">
+													m1CKe
+												</div>
+												<div class="table-team__player">
+													Boxi
+												</div>
+												<div class="table-team__player">
+													zai
+												</div>
+												<div class="table-team__player">
+													Nisha
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-country">
+											<div class="table-team__flag">
+												<img src="img/match/flag-nd.svg" alt="flag-nd">
+											</div>
+											<div class="table-team__dpcrating">
+												<div class="table-team__text">
+													Рейтинг DPC:
+												</div>
+												<div class="table-team__data">
+													1
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												Всього виграно:
+											</div>
+											<div class="table-team__data">
+												$ 25 177 194
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-created">
+											<div class="table-team__text">
+												Створена:
+											</div>
+											<div class="table-team__data">
+												6 грудня 2012
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-winrate">
+											<div class="table-team__winrate">
+												<div class="table-team__text">
+													Вінрейт:
+												</div>
+												<div class="table-team__data">
+													59%
+													<span>
+														(<span class="data-green">410</span>/<span class="data-grey">47</span>/<span class="data-orange">239</span>)
+													</span>
+												</div>
+											</div>
+											<div class="table-team__schedule">
+												<span class="table-team__schedule-green" style="width: 53%;"></span>
+												<span class="table-team__schedule-grey" style="width: 13%;"></span>
+												<span class="table-team__schedule-orange" style="width: 34%;"></span>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												DPC очоки:
+											</div>
+											<div class="table-team__data">
+												1 550
+											</div>
+										</div>
+									</a>
+									<a href="#" class="teams__item table-team">
+										<div class="table-team__item table-team__team">
+											<div class="table-team__img">
+												<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+											</div>
+											<div class="table-team__name">
+												TEAM LIQUID
+											</div>
+											<div class="table-team__country">
+												<div class="table-team__flag">
+													<img src="img/match/flag-nd.svg" alt="flag-nd">
+												</div>
+												<span>
+													Нідерланди
+												</span>
+											</div>
+											<div class="table-team__players">
+												<div class="table-team__player">
+													iNSaNiA
+												</div>
+												<div class="table-team__player">
+													m1CKe
+												</div>
+												<div class="table-team__player">
+													Boxi
+												</div>
+												<div class="table-team__player">
+													zai
+												</div>
+												<div class="table-team__player">
+													Nisha
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-country">
+											<div class="table-team__flag">
+												<img src="img/match/flag-nd.svg" alt="flag-nd">
+											</div>
+											<div class="table-team__dpcrating">
+												<div class="table-team__text">
+													Рейтинг DPC:
+												</div>
+												<div class="table-team__data">
+													1
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												Всього виграно:
+											</div>
+											<div class="table-team__data">
+												$ 25 177 194
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-created">
+											<div class="table-team__text">
+												Створена:
+											</div>
+											<div class="table-team__data">
+												6 грудня 2012
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-winrate">
+											<div class="table-team__winrate">
+												<div class="table-team__text">
+													Вінрейт:
+												</div>
+												<div class="table-team__data">
+													59%
+													<span>
+														(<span class="data-green">410</span>/<span class="data-grey">47</span>/<span class="data-orange">239</span>)
+													</span>
+												</div>
+											</div>
+											<div class="table-team__schedule">
+												<span class="table-team__schedule-green" style="width: 53%;"></span>
+												<span class="table-team__schedule-grey" style="width: 13%;"></span>
+												<span class="table-team__schedule-orange" style="width: 34%;"></span>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												DPC очоки:
+											</div>
+											<div class="table-team__data">
+												1 550
+											</div>
+										</div>
+									</a>
+									<a href="#" class="teams__item table-team">
+										<div class="table-team__item table-team__team">
+											<div class="table-team__img">
+												<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+											</div>
+											<div class="table-team__name">
+												TEAM LIQUID
+											</div>
+											<div class="table-team__country">
+												<div class="table-team__flag">
+													<img src="img/match/flag-nd.svg" alt="flag-nd">
+												</div>
+												<span>
+													Нідерланди
+												</span>
+											</div>
+											<div class="table-team__players">
+												<div class="table-team__player">
+													iNSaNiA
+												</div>
+												<div class="table-team__player">
+													m1CKe
+												</div>
+												<div class="table-team__player">
+													Boxi
+												</div>
+												<div class="table-team__player">
+													zai
+												</div>
+												<div class="table-team__player">
+													Nisha
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-country">
+											<div class="table-team__flag">
+												<img src="img/match/flag-nd.svg" alt="flag-nd">
+											</div>
+											<div class="table-team__dpcrating">
+												<div class="table-team__text">
+													Рейтинг DPC:
+												</div>
+												<div class="table-team__data">
+													1
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												Всього виграно:
+											</div>
+											<div class="table-team__data">
+												$ 25 177 194
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-created">
+											<div class="table-team__text">
+												Створена:
+											</div>
+											<div class="table-team__data">
+												6 грудня 2012
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-winrate">
+											<div class="table-team__winrate">
+												<div class="table-team__text">
+													Вінрейт:
+												</div>
+												<div class="table-team__data">
+													59%
+													<span>
+														(<span class="data-green">410</span>/<span class="data-grey">47</span>/<span class="data-orange">239</span>)
+													</span>
+												</div>
+											</div>
+											<div class="table-team__schedule">
+												<span class="table-team__schedule-green" style="width: 53%;"></span>
+												<span class="table-team__schedule-grey" style="width: 13%;"></span>
+												<span class="table-team__schedule-orange" style="width: 34%;"></span>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												DPC очоки:
+											</div>
+											<div class="table-team__data">
+												1 550
+											</div>
+										</div>
+									</a>
+									<a href="#" class="teams__item table-team">
+										<div class="table-team__item table-team__team">
+											<div class="table-team__img">
+												<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+											</div>
+											<div class="table-team__name">
+												TEAM LIQUID
+											</div>
+											<div class="table-team__country">
+												<div class="table-team__flag">
+													<img src="img/match/flag-nd.svg" alt="flag-nd">
+												</div>
+												<span>
+													Нідерланди
+												</span>
+											</div>
+											<div class="table-team__players">
+												<div class="table-team__player">
+													iNSaNiA
+												</div>
+												<div class="table-team__player">
+													m1CKe
+												</div>
+												<div class="table-team__player">
+													Boxi
+												</div>
+												<div class="table-team__player">
+													zai
+												</div>
+												<div class="table-team__player">
+													Nisha
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-country">
+											<div class="table-team__flag">
+												<img src="img/match/flag-nd.svg" alt="flag-nd">
+											</div>
+											<div class="table-team__dpcrating">
+												<div class="table-team__text">
+													Рейтинг DPC:
+												</div>
+												<div class="table-team__data">
+													1
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												Всього виграно:
+											</div>
+											<div class="table-team__data">
+												$ 25 177 194
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-created">
+											<div class="table-team__text">
+												Створена:
+											</div>
+											<div class="table-team__data">
+												6 грудня 2012
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-winrate">
+											<div class="table-team__winrate">
+												<div class="table-team__text">
+													Вінрейт:
+												</div>
+												<div class="table-team__data">
+													59%
+													<span>
+														(<span class="data-green">410</span>/<span class="data-grey">47</span>/<span class="data-orange">239</span>)
+													</span>
+												</div>
+											</div>
+											<div class="table-team__schedule">
+												<span class="table-team__schedule-green" style="width: 53%;"></span>
+												<span class="table-team__schedule-grey" style="width: 13%;"></span>
+												<span class="table-team__schedule-orange" style="width: 34%;"></span>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												DPC очоки:
+											</div>
+											<div class="table-team__data">
+												1 550
+											</div>
+										</div>
+									</a>
+									<a href="#" class="teams__item table-team">
+										<div class="table-team__item table-team__team">
+											<div class="table-team__img">
+												<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+											</div>
+											<div class="table-team__name">
+												TEAM LIQUID
+											</div>
+											<div class="table-team__country">
+												<div class="table-team__flag">
+													<img src="img/match/flag-nd.svg" alt="flag-nd">
+												</div>
+												<span>
+													Нідерланди
+												</span>
+											</div>
+											<div class="table-team__players">
+												<div class="table-team__player">
+													iNSaNiA
+												</div>
+												<div class="table-team__player">
+													m1CKe
+												</div>
+												<div class="table-team__player">
+													Boxi
+												</div>
+												<div class="table-team__player">
+													zai
+												</div>
+												<div class="table-team__player">
+													Nisha
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-country">
+											<div class="table-team__flag">
+												<img src="img/match/flag-nd.svg" alt="flag-nd">
+											</div>
+											<div class="table-team__dpcrating">
+												<div class="table-team__text">
+													Рейтинг DPC:
+												</div>
+												<div class="table-team__data">
+													1
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												Всього виграно:
+											</div>
+											<div class="table-team__data">
+												$ 25 177 194
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-created">
+											<div class="table-team__text">
+												Створена:
+											</div>
+											<div class="table-team__data">
+												6 грудня 2012
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-winrate">
+											<div class="table-team__winrate">
+												<div class="table-team__text">
+													Вінрейт:
+												</div>
+												<div class="table-team__data">
+													59%
+													<span>
+														(<span class="data-green">410</span>/<span class="data-grey">47</span>/<span class="data-orange">239</span>)
+													</span>
+												</div>
+											</div>
+											<div class="table-team__schedule">
+												<span class="table-team__schedule-green" style="width: 53%;"></span>
+												<span class="table-team__schedule-grey" style="width: 13%;"></span>
+												<span class="table-team__schedule-orange" style="width: 34%;"></span>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												DPC очоки:
+											</div>
+											<div class="table-team__data">
+												1 550
+											</div>
+										</div>
+									</a>
+									<a href="#" class="teams__item table-team">
+										<div class="table-team__item table-team__team">
+											<div class="table-team__img">
+												<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+											</div>
+											<div class="table-team__name">
+												TEAM LIQUID
+											</div>
+											<div class="table-team__country">
+												<div class="table-team__flag">
+													<img src="img/match/flag-nd.svg" alt="flag-nd">
+												</div>
+												<span>
+													Нідерланди
+												</span>
+											</div>
+											<div class="table-team__players">
+												<div class="table-team__player">
+													iNSaNiA
+												</div>
+												<div class="table-team__player">
+													m1CKe
+												</div>
+												<div class="table-team__player">
+													Boxi
+												</div>
+												<div class="table-team__player">
+													zai
+												</div>
+												<div class="table-team__player">
+													Nisha
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-country">
+											<div class="table-team__flag">
+												<img src="img/match/flag-nd.svg" alt="flag-nd">
+											</div>
+											<div class="table-team__dpcrating">
+												<div class="table-team__text">
+													Рейтинг DPC:
+												</div>
+												<div class="table-team__data">
+													1
+												</div>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												Всього виграно:
+											</div>
+											<div class="table-team__data">
+												$ 25 177 194
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-created">
+											<div class="table-team__text">
+												Створена:
+											</div>
+											<div class="table-team__data">
+												6 грудня 2012
+											</div>
+										</div>
+										<div class="table-team__item table-team__item-winrate">
+											<div class="table-team__winrate">
+												<div class="table-team__text">
+													Вінрейт:
+												</div>
+												<div class="table-team__data">
+													59%
+													<span>
+														(<span class="data-green">410</span>/<span class="data-grey">47</span>/<span class="data-orange">239</span>)
+													</span>
+												</div>
+											</div>
+											<div class="table-team__schedule">
+												<span class="table-team__schedule-green" style="width: 53%;"></span>
+												<span class="table-team__schedule-grey" style="width: 13%;"></span>
+												<span class="table-team__schedule-orange" style="width: 34%;"></span>
+											</div>
+										</div>
+										<div class="table-team__item">
+											<div class="table-team__text">
+												DPC очоки:
+											</div>
+											<div class="table-team__data">
+												1 550
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="matches__pagination pagination">
+								<div class="pagination__inner">
+									<a href="#" disabled class="pagination__btn pagination__btn-prev">
+										<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9 14L3 7.72057L9 2" stroke="white" stroke-width="3" />
+										</svg>
+									</a>
+									<ul class="pagination__list">
+										<li class="pagination__item">
+											<a href="#" class="pagination__link active">
+												1
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__link">
+												2
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__link">
+												3
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__dotted">
+												...
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__link">
+												10
+											</a>
+										</li>
+									</ul>
+									<a href="#" class="pagination__btn pagination__btn-next">
+										<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2 2L8 8.27943L2 14" stroke="white" stroke-width="3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="information-in-aside information">
+								<div class="information__body">
+									<div class="information__content">
+										<h4>
+											Більше про професійні команди Dota 2
+										</h4>
+										<p>
+											Як і в звичайному спорті, в кіберспорті є багато професіоналів, якими всі захоплюються і ставлять за приклад. Dota 2 не є винятком: там також беруть участь досвідчені команди, які своїм прикладом спонукають новачків розвиватися в цьому напрямку.
+										</p>
+										<h4>
+											Як команда стає професійною?
+										</h4>
+										<p>
+											Незважаючи на те, що основа Dota - команда, гру все-таки неможливо назвати цілком і повністю "командною". Успіх залежить від кожного учасника - його настрою, навичок, вміння вибрати "свого" героя і підтримувати дух команди в скрутний час.
+										</p>
+										<p>
+											Професійні гравці дають ряд особливо необхідних речей, без яких команду вивести в топ неможливо. До них відносяться:
+										</p>
+										<ul>
+											<li>
+												терпіння - іноді матч триває кілька годин, і будувати надії на те, що все відбудеться швидко, як мінімум, нерозумно;
+											</li>
+											<li>
+												рішучість - не варто стояти осторонь, поки товариші знищують ворожу базу - треба діяти;
+											</li>
+											<li>
+												впевненість - головне - бути впевненим у своїх силах;
+											</li>
+											<li>
+												знати гру і всі її тонкощі - орієнтуватися в героях, знати їх слабкі і сильні сторони;
+											</li>
+											<li>
+												моральна настройка - віра в свої здібності, повторювати собі "я класний гравець" і все в цьому роді.
+											</li>
+										</ul>
+										<p>
+											Крім того, важливо володіти навичками - мікро і макро. Макро-навичка - вміння правильно керувати персонажем і використовувати його закляття. Мікро-навички можна покращити під час гри в публічні матчі.
+										</p>
+										<p>
+											Макро-навичками називають ментальну складову. Це розуміння самої гри, її осмислення, навички спілкування з іншими гравцями. Як правило, макро-навички отримуються при командних тренуваннях.
+										</p>
+										<h4>
+											Найкращі команди гри Dota 2: як визначити?
+										</h4>
+										<p>
+											В Dota 2 є перелік найкращих команд, що входять в ТОП. Рейтинг формується з урахуванням кількості DPC-очок, які постійно змінюються, або серій перемог на великих турнірах. Наприклад, зараз на першій сходинці може бути Team Liquid, а через кілька днів - 9 pandas, все залежить від турнірів, в яких команди беруть участь та їхнього рівня гри. Подивитися актуальний рейтинг професійних команд можна в вкладці "Команди" на цьому сайті.
+										</p>
+										<p>
+											Кожна з команд має свій офіційний рейтинг DPC, відповідно, DPC-очки. Рейтинг може змінюватися і залежить від результатів матчів.
+										</p>
+										<p>
+											Зазвичай до найкращих команд входять гравці, які брали участь в великих турнірах. Також можна визначити одну єдину топову команду або хоча би першу десятку за декількома критеріями:
+										</p>
+										<ul>
+											<li>
+												за грою та результатами в конкретному ігровому регіоні;
+											</li>
+											<li>
+												на основі DPC-очок;
+											</li>
+											<li>
+												на основі кількості виграних турнірів;
+											</li>
+											<li>
+												за професіоналізмом гравців та ін.
+											</li>
+										</ul>
+										<p>
+											Не варто також забувати, що для кожного шанувальника кіберспорту, і Dota2 зокрема, буде "свій" командний топ.
+										</p>
+										<p>
+											Всю необхідну інформацію по першій десятці та іншим професійним командам Dota 2 можна вивчити на сайті dota2.cyberdata.pro. При виборі регіону (Східна, Західна Європа, Північна, Південна Америка, Китай, Південно-Східна Азія) ресурс відобразить команди, що знаходяться там.
+										</p>
+										<p>
+											Щоб дізнатися більше, наприклад, про історію команди, склад (з фото гравців, їхні позиції, імена), трансфери команди (якщо є), найближчі матчі та турніри, а також минулі з отриманим результатом, потрібно вибрати команду, яка вас цікавить, і ви потрапите на більш докладну інформацію про неї. Таке вивчення дозволяє розуміти потенціал команди на майбутніх заходах.
+										</p>
+										<p>
+											Якщо ж вам незручно користуватися нашим ресурсом, повідомте нам про це в розділі "контакти" і ми зробимо все, щоб поліпшити ваш користувацький досвід.
+										</p>
+									</div>
+									<div class="information__aside">
+										<div class="information__menu menu">
+											<nav class="menu__body">
+												<ul class="menu__list">
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Турніри
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Команди і інтерактивна мапа
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Матчі
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Трансфери
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Блог
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__item">
+						<a href="#" class="footer__logo">
+							<img src="img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="footer__item">
+						<div class="footer__copy">
+							©2023 Сделано с любовью в Украине
+						</div>
+					</div>
+					<div class="footer__item">
+						<div class="footer__text">
+							По будь-яким питанням звертайтесь за адресою:
+						</div>
+						<a href="mailto:contact@cyberdata.pro" class="footer__link" target="_blank">
+							<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_134_46978)">
+									<path d="M1.33325 11C1.33325 7.22876 1.33325 5.34315 2.50482 4.17157C3.6764 3 5.56202 3 9.33325 3H13.3333C17.1045 3 18.9901 3 20.1617 4.17157C21.3333 5.34315 21.3333 7.22876 21.3333 11C21.3333 14.7712 21.3333 16.6569 20.1617 17.8284C18.9901 19 17.1045 19 13.3333 19H9.33325C5.56202 19 3.6764 19 2.50482 17.8284C1.33325 16.6569 1.33325 14.7712 1.33325 11Z" stroke="#919191" stroke-width="2" />
+									<path d="M5.33325 7L7.49215 8.79908C9.32878 10.3296 10.2471 11.0949 11.3333 11.0949C12.4194 11.0949 13.3377 10.3296 15.1744 8.79908L17.3333 7" stroke="#919191" stroke-width="2" stroke-linecap="round" />
+								</g>
+								<defs>
+									<clipPath id="clip0_134_46978">
+										<rect width="22" height="22" fill="white" transform="translate(0.333252)" />
+									</clipPath>
+								</defs>
+							</svg>
+							<span>contact@cyberdata.pro</span>
+						</a>
+					</div>
+					<div class="footer__item">
+						<div class="footer__dota">
+							Dota 2
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230615180651"></script>
+</body>
+
+</html>
