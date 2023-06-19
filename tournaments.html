@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<title>Турніри</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230619094203">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="#" class="header__logo">
+						<img src="img/logo.svg" alt="logo cyberdata.pro">
+					</a>
+					<div class="header__search search-block">
+						<div class="search-block__body">
+							<input autocomplete="off" type="text" name="search" placeholder="Наприклад Puppey" class="search-block__input">
+							<button type="button" class="search-block__btn">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16.25 16.25L12.5 12.5M1.75 8C1.75 4.54822 4.54822 1.75 8 1.75C11.4518 1.75 14.25 4.54822 14.25 8C14.25 11.4518 11.4518 14.25 8 14.25C4.54822 14.25 1.75 11.4518 1.75 8Z" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+						<ul class="search-block__possible possible-search">
+							<li>
+								<a href="#" class="possible-search__item possible-search__players">
+									<div class="possible-search__info">
+										<div class="possible-search__img">
+											<picture><source srcset="img/header/photo-players.webp" type="image/webp"><img src="img/header/photo-players.jpg" alt="photo player"></picture>
+										</div>
+										<div class="possible-search__name">
+											Puppey
+										</div>
+									</div>
+									<div class="possible-search__category">
+										Гравці
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="possible-search__item possible-search__teams">
+									<div class="possible-search__info">
+										<div class="possible-search__img">
+											<picture><source srcset="img/header/photo-team.webp" type="image/webp"><img src="img/header/photo-team.jpg" alt="photo team"></picture>
+										</div>
+										<div class="possible-search__name">
+											TEAM SECRET
+										</div>
+									</div>
+									<div class="possible-search__category">
+										Команди
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header__actives">
+						<div class="header__lang lang-block">
+							<div class="lang-block__lang">
+								<img src="img/header/ua-flag.svg" alt="ua flag">
+							</div>
+							<ul class="lang-block__dropdown">
+								<li class="lang-block__item">
+									<a href="#" class="lang-block__link">
+										<img src="img/header/uk-flag.svg" alt="uk flag">
+									</a>
+								</li>
+								<li class="lang-block__item">
+									<a href="#" class="lang-block__link">
+										<img src="img/header/flag.svg" alt="flag">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="header__dota">
+							Dota 2
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page__tournaments-page">
+			<div class="tournaments-page__breadcrumbs breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.6237 16.0419H14.3737C15.2942 16.0419 16.0404 15.2957 16.0404 14.3752V8.1252L9.9987 3.95853L3.95703 8.1252V14.3752C3.95703 15.2957 4.70322 16.0419 5.6237 16.0419Z" stroke="#919191" stroke-opacity="0.568627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M8.12319 13.1244C8.12319 12.2039 8.86938 11.4577 9.78986 11.4577H10.2065C11.127 11.4577 11.8732 12.2039 11.8732 13.1244V16.0411H8.12319V13.1244Z" stroke="#919191" stroke-opacity="0.568627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__span">Турніри</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section class="tournaments-page">
+				<div class="tournaments-page__container">
+					<div class="tournaments-page__head">
+						<h2 class="tournaments-page__title title">
+							Турніри
+						</h2>
+						<div class="tournaments-page__text text">
+							Зручний таймлайн найближчих турнірів
+						</div>
+					</div>
+					<div class="tournaments-page__body">
+						<aside class="tournaments-page__aside aside-filter">
+							<div data-spollers="1100" class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										<span>Всі турніри</span>
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+									</summary>
+									<div class="spollers__body">
+										<div class="aside-filter__inner">
+											<h4 class="aside-filter__title">
+												Регіон
+											</h4>
+											<div class="checkbox">
+												<input id="c_18" class="checkbox__input" type="checkbox" value="18" name="">
+												<label for="c_18" class="checkbox__label">
+													<span class="checkbox__text">Східна Європа</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_19" class="checkbox__input" type="checkbox" value="19" name="">
+												<label for="c_19" class="checkbox__label">
+													<span class="checkbox__text">Західна Європа</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_20" class="checkbox__input" type="checkbox" value="20" name="">
+												<label for="c_20" class="checkbox__label">
+													<span class="checkbox__text">Північна Америка</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_21" class="checkbox__input" type="checkbox" value="21" name="">
+												<label for="c_21" class="checkbox__label">
+													<span class="checkbox__text">Південна Америка</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_22" class="checkbox__input" type="checkbox" value="22" name="">
+												<label for="c_22" class="checkbox__label">
+													<span class="checkbox__text">Китай</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_23" class="checkbox__input" type="checkbox" value="23" name="">
+												<label for="c_23" class="checkbox__label">
+													<span class="checkbox__text">Південно-Східна Азія</span>
+												</label>
+											</div>
+										</div>
+										<div class="aside-filter__inner">
+											<h4 class="aside-filter__title">
+												Тір
+											</h4>
+											<div class="checkbox">
+												<input id="c_24" class="checkbox__input" type="checkbox" value="24" name="">
+												<label for="c_24" class="checkbox__label">
+													<span class="checkbox__text">Тір 1</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_25" class="checkbox__input" type="checkbox" value="25" name="">
+												<label for="c_25" class="checkbox__label">
+													<span class="checkbox__text">Тір 2</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_26" class="checkbox__input" type="checkbox" value="26" name="">
+												<label for="c_26" class="checkbox__label">
+													<span class="checkbox__text">Тір 3</span>
+												</label>
+											</div>
+										</div>
+										<div class="aside-filter__inner">
+											<h4 class="aside-filter__title">
+												Рік
+											</h4>
+											<div class="checkbox">
+												<input id="c_27" class="checkbox__input" type="checkbox" value="27" name="">
+												<label for="c_27" class="checkbox__label">
+													<span class="checkbox__text">2023</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_28" class="checkbox__input" type="checkbox" value="28" name="">
+												<label for="c_28" class="checkbox__label">
+													<span class="checkbox__text">2022</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_29" class="checkbox__input" type="checkbox" value="29" name="">
+												<label for="c_29" class="checkbox__label">
+													<span class="checkbox__text">2021</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_30" class="checkbox__input" type="checkbox" value="30" name="">
+												<label for="c_30" class="checkbox__label">
+													<span class="checkbox__text">2020</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_31" class="checkbox__input" type="checkbox" value="31" name="">
+												<label for="c_31" class="checkbox__label">
+													<span class="checkbox__text">2019</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_32" class="checkbox__input" type="checkbox" value="32" name="">
+												<label for="c_32" class="checkbox__label">
+													<span class="checkbox__text">2018</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_33" class="checkbox__input" type="checkbox" value="33" name="">
+												<label for="c_33" class="checkbox__label">
+													<span class="checkbox__text">2017</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_34" class="checkbox__input" type="checkbox" value="34" name="">
+												<label for="c_34" class="checkbox__label">
+													<span class="checkbox__text">2016</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_35" class="checkbox__input" type="checkbox" value="35" name="">
+												<label for="c_35" class="checkbox__label">
+													<span class="checkbox__text">2015</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_36" class="checkbox__input" type="checkbox" value="36" name="">
+												<label for="c_36" class="checkbox__label">
+													<span class="checkbox__text">2014</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</details>
+							</div>
+						</aside>
+						<div class="tournaments-page__content">
+							<div class="tournaments-page__wrapper">
+								<div class="tournaments">
+									<div class="tournaments__date">
+										<div class="tournaments__mounth">
+											Червень
+										</div>
+										<div class="tournaments__year">
+											2023
+										</div>
+									</div>
+									<div class="tournaments__body">
+										<div class="tournaments__table-top">
+											<div class="tournaments__top-text">
+												Event
+											</div>
+											<div class="tournaments__top-text">
+												Tip
+											</div>
+											<div class="tournaments__top-text">
+												Сума призових
+											</div>
+											<div class="tournaments__top-text">
+												інші призи
+											</div>
+											<div class="tournaments__top-text">
+												Команди
+											</div>
+										</div>
+										<div class="tournaments__items">
+											<div class="tournaments__item tournaments-table">
+												<a href="#" class="tournaments-table__item tournaments-table__item-event">
+													<div class="tournaments-table__img-event">
+														<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+													</div>
+													<div class="tournaments-table__event-info">
+														<div class="tournaments-table__event-name">
+															DreamLeague Season 20
+														</div>
+														<div class="tournaments-table__date">
+															11.06.2023
+														</div>
+													</div>
+												</a>
+												<div class="tournaments-table__item">
+													<div class="tournaments-table__text">
+														Tip:
+													</div>
+													<div class="tournaments-table__data">
+														TIP 1
+													</div>
+												</div>
+												<div class="tournaments-table__item">
+													<div class="tournaments-table__text">
+														Сума призових:
+													</div>
+													<div class="tournaments-table__data">
+														$ 500 000
+													</div>
+												</div>
+												<div class="tournaments-table__item">
+													<div class="tournaments-table__text">
+														інші призи:
+													</div>
+													<div class="tournaments-table__data">
+														3 500 DPC
+													</div>
+												</div>
+												<div class="tournaments-table__item tournaments-table__item-teams">
+													<div class="tournaments-table__text">
+														Команди
+													</div>
+													<div class="tournaments-table__teams">
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-2.webp" type="image/webp"><img src="img/index-teams/team-images-2.jpg" alt="team-images-2"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-3.webp" type="image/webp"><img src="img/index-teams/team-images-3.jpg" alt="team-images-3"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-4.webp" type="image/webp"><img src="img/index-teams/team-images-4.jpg" alt="team-images-4"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-5.webp" type="image/webp"><img src="img/index-teams/team-images-5.jpg" alt="team-images-5"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-6.webp" type="image/webp"><img src="img/index-teams/team-images-6.jpg" alt="team-images-6"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-7.webp" type="image/webp"><img src="img/index-teams/team-images-7.jpg" alt="team-images-7"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-8.webp" type="image/webp"><img src="img/index-teams/team-images-8.jpg" alt="team-images-8"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-9.webp" type="image/webp"><img src="img/index-teams/team-images-9.jpg" alt="team-images-9"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-10.webp" type="image/webp"><img src="img/index-teams/team-images-10.jpg" alt="team-images-10"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-11.webp" type="image/webp"><img src="img/index-teams/team-images-11.jpg" alt="team-images-11"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-12.webp" type="image/webp"><img src="img/index-teams/team-images-12.jpg" alt="team-images-12"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-13.webp" type="image/webp"><img src="img/index-teams/team-images-13.jpg" alt="team-images-13"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-14.webp" type="image/webp"><img src="img/index-teams/team-images-14.jpg" alt="team-images-14"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-15.webp" type="image/webp"><img src="img/index-teams/team-images-15.jpg" alt="team-images-15"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-16.webp" type="image/webp"><img src="img/index-teams/team-images-16.jpg" alt="team-images-16"></picture>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="tournaments__item tournaments-table">
+												<a href="#" class="tournaments-table__item tournaments-table__item-event">
+													<div class="tournaments-table__img-event">
+														<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+													</div>
+													<div class="tournaments-table__event-info">
+														<div class="tournaments-table__event-name">
+															DreamLeague Season 20
+														</div>
+														<div class="tournaments-table__date">
+															11.06.2023
+														</div>
+													</div>
+												</a>
+												<div class="tournaments-table__item">
+													<div class="tournaments-table__text">
+														Tip
+													</div>
+													<div class="tournaments-table__data">
+														TIP 1
+													</div>
+												</div>
+												<div class="tournaments-table__item">
+													<div class="tournaments-table__text">
+														Сума призових:
+													</div>
+													<div class="tournaments-table__data">
+														$ 500 000
+													</div>
+												</div>
+												<div class="tournaments-table__item">
+													<div class="tournaments-table__text">
+														інші призи:
+													</div>
+													<div class="tournaments-table__data">
+														3 500 DPC
+													</div>
+												</div>
+												<div class="tournaments-table__item tournaments-table__item-teams">
+													<div class="tournaments-table__text">
+														Команди
+													</div>
+													<div class="tournaments-table__teams">
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-1.webp" type="image/webp"><img src="img/index-teams/team-images-1.jpg" alt="team-images-1"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-2.webp" type="image/webp"><img src="img/index-teams/team-images-2.jpg" alt="team-images-2"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-3.webp" type="image/webp"><img src="img/index-teams/team-images-3.jpg" alt="team-images-3"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-4.webp" type="image/webp"><img src="img/index-teams/team-images-4.jpg" alt="team-images-4"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-5.webp" type="image/webp"><img src="img/index-teams/team-images-5.jpg" alt="team-images-5"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-6.webp" type="image/webp"><img src="img/index-teams/team-images-6.jpg" alt="team-images-6"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-7.webp" type="image/webp"><img src="img/index-teams/team-images-7.jpg" alt="team-images-7"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-8.webp" type="image/webp"><img src="img/index-teams/team-images-8.jpg" alt="team-images-8"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-9.webp" type="image/webp"><img src="img/index-teams/team-images-9.jpg" alt="team-images-9"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-10.webp" type="image/webp"><img src="img/index-teams/team-images-10.jpg" alt="team-images-10"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-11.webp" type="image/webp"><img src="img/index-teams/team-images-11.jpg" alt="team-images-11"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-12.webp" type="image/webp"><img src="img/index-teams/team-images-12.jpg" alt="team-images-12"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-13.webp" type="image/webp"><img src="img/index-teams/team-images-13.jpg" alt="team-images-13"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-14.webp" type="image/webp"><img src="img/index-teams/team-images-14.jpg" alt="team-images-14"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-15.webp" type="image/webp"><img src="img/index-teams/team-images-15.jpg" alt="team-images-15"></picture>
+														</a>
+														<a href="#" class="tournaments-table__team">
+															<picture><source srcset="img/index-teams/team-images-16.webp" type="image/webp"><img src="img/index-teams/team-images-16.jpg" alt="team-images-16"></picture>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tournaments-page__other">
+									<div class="tournaments tournaments__small">
+										<div class="tournaments__body">
+											<div class="tournaments__table-top">
+												<div class="tournaments__top-text">
+													Event
+												</div>
+												<div class="tournaments__top-text">
+													Tip
+												</div>
+												<div class="tournaments__top-text">
+													Сума призових
+												</div>
+											</div>
+											<div class="tournaments__items">
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tournaments tournaments__small">
+										<div class="tournaments__body">
+											<div class="tournaments__table-top">
+												<div class="tournaments__top-text">
+													Event
+												</div>
+												<div class="tournaments__top-text">
+													Tip
+												</div>
+												<div class="tournaments__top-text">
+													Сума призових
+												</div>
+											</div>
+											<div class="tournaments__items">
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tournaments__date">
+									<div class="tournaments__mounth">
+										Травень
+									</div>
+									<div class="tournaments__year">
+										2023
+									</div>
+								</div>
+								<div class="tournaments-page__other">
+									<div class="tournaments tournaments__small">
+										<div class="tournaments__body">
+											<div class="tournaments__table-top">
+												<div class="tournaments__top-text">
+													Event
+												</div>
+												<div class="tournaments__top-text">
+													Tip
+												</div>
+												<div class="tournaments__top-text">
+													Сума призових
+												</div>
+											</div>
+											<div class="tournaments__items">
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tournaments tournaments__small">
+										<div class="tournaments__body">
+											<div class="tournaments__table-top">
+												<div class="tournaments__top-text">
+													Event
+												</div>
+												<div class="tournaments__top-text">
+													Tip
+												</div>
+												<div class="tournaments__top-text">
+													Сума призових
+												</div>
+											</div>
+											<div class="tournaments__items">
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+												<div class="tournaments__item tournaments-table">
+													<a href="#" class="tournaments-table__item tournaments-table__item-event">
+														<div class="tournaments-table__img-event">
+															<picture><source srcset="img/match/team-images-2.webp" type="image/webp"><img src="img/match/team-images-2.jpg" alt="event img"></picture>
+														</div>
+														<div class="tournaments-table__event-info">
+															<div class="tournaments-table__event-name">
+																DreamLeague Season 20
+															</div>
+															<div class="tournaments-table__date">
+																11.06.2023
+															</div>
+														</div>
+													</a>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Tip:
+														</div>
+														<div class="tournaments-table__data">
+															TIP 1
+														</div>
+													</div>
+													<div class="tournaments-table__item">
+														<div class="tournaments-table__text">
+															Сума призових:
+														</div>
+														<div class="tournaments-table__data">
+															$ 500 000
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="matches__pagination pagination">
+								<div class="pagination__inner">
+									<a href="#" disabled class="pagination__btn pagination__btn-prev">
+										<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9 14L3 7.72057L9 2" stroke="white" stroke-width="3" />
+										</svg>
+									</a>
+									<ul class="pagination__list">
+										<li class="pagination__item">
+											<a href="#" class="pagination__link active">
+												1
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__link">
+												2
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__link">
+												3
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__dotted">
+												...
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a href="#" class="pagination__link">
+												10
+											</a>
+										</li>
+									</ul>
+									<a href="#" class="pagination__btn pagination__btn-next">
+										<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2 2L8 8.27943L2 14" stroke="white" stroke-width="3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="information-in-aside information">
+								<div class="information__body">
+									<div class="information__content">
+										<h4 class="information__title">
+											Більше про професійні турніри <span>Dota 2</span>
+										</h4>
+										<p>
+											Dota 2 є стратегічною комп'ютерною грою, в процесі якої команди вдосконалюють свої навички та вміння. Щоб підтримати інтерес до Dota, розробники передбачили турніри.
+										</p>
+										<h4>
+											Турніри: що це, які типи бувають?
+										</h4>
+										<p>
+											Турніром по Dota 2 називають захід змагального характеру, де можуть брати участь команди з усього світу (як новачки, так і професіонали). Відмінна риса: команди мають приблизно однаковий рівень. Це розумно, адже команда, що грає лише кілька тижнів, явно не вистоїть проти професіоналів з декілька років досвіду гри.
+										</p>
+										<p>
+											Усі турніри в Dota 2 діляться на кілька типів:
+										</p>
+										<ul>
+											<li>
+												Тір 3, Тір 4 – в основному це невеликі змагання в межах регіону або країни, хороший шанс проявити себе серед інших новачків;
+											</li>
+											<li>
+												Тір 2 – беруть участь як любительські команди, так і досвідчені; часто пропонують гідні грошові призи та DPC бали;
+											</li>
+											<li>
+												Тір 1 – змагання, де розігрується значний призовий фонд, часто проходять в офф-лайн. Такі турніри є повноцінними спортивними подіями. Спеціально для них бронюються стадіони у найбільших містах планети і продаються квитки для відвідування.
+											</li>
+										</ul>
+										<p>
+											Турніри потрібні командам перш за все для того, щоб гравці покращили свої навички, подумали над новими стратегіями і вивчили слабкі місця своїх суперників, а також просто виграли певний призовий фонд. Коли з'являється можливість брати участь і змагатися в більш великих міжнародних турнірах, наприклад, Мajor або The International, команда вже більш підготовлена в гровому плані.
+										</p>
+										<p>
+											На dota2.cyberdata.pro представлені всі професійні турніри, які відрізняються між собою тірами (рівнем майстерності команд).
+										</p>
+										<h4>
+											Популярні професійні турніри по Dota 2
+										</h4>
+										<p>
+											Звичайно ж, у кожної команди є свої змагання мрії, в яких хочеться зіграти і спробувати свої сили. Якщо говорити не про кіберспортсменів, а про людей, що слідкують за кіберспортом, то варто знати, що існує графік турнірів на рік. Кожен з них відбувається в певний час (наприклад, кілька днів або тижнів) в певному місці, де збираються всі команди, що беруть участь (якщо змагання типу «Тір 1» або «Тір 2», то сидіти вдома в улюбленому кріслі і грати не вийде).
+										</p>
+										<p>
+											Незалежно від року, турніри по Dota 2 заплановані. Є ті, які проходять щорічно, або ті, що організовуються виходячи з обставин. Їх можна подивитися прямо на нашому сайті. Тут викладена інформація про майбутні турніри та матчі, поточні та минулі. Вкладка «Турніри» надає відвідувачам сайту всю необхідну інформацію.
+										</p>
+										<p>
+											Найбільш цікаво справи з ежегодними заходами, які очікуються гравцями та командами по всьому світу:
+										</p>
+										<ul>
+											<li>
+												The International;
+											</li>
+											<li>
+												Major;
+											</li>
+											<li>
+												DPC ліги;
+											</li>
+										</ul>
+										<p>
+											Ці турніри проводяться кожного року і вважаються «топовими». На них мріє потрапити кожна команда, незалежно від рівня професіоналізму і досвіду в Dota 2.
+										</p>
+										<p>
+											<b>The International</b> – саме важлива подія по грі Dota 2. Кращі команди світового рівня (з шести регіонів) продемонструють свої вміння в боротьбі один проти одного. З 2022 року кількість команд-учасників має бути 30. Турнір організують розробники самої гри Dota – компанія Valve. Турнір можна порівняти по значимості в кіберспорті, наприклад, з проведенням Чемпіонату Світу з футболу. Крім призового фонду, також розігрується егіда чемпіонів – нагорода турніру. Вона представляє собою щит зі срібла і бронзи, на якому гравіруються всі назви команди переможців, починаючи з самого першого турніру.
+										</p>
+										<p>
+											<b>Major</b> – ряд турнірів, які проходять в LAN-форматі. Для того щоб змагання отримало статус «Мейджор», є ряд правил, які контролюють самі Valve. У змаганні беруть участь вісімнадцять команд з усього світу, використовується кругова система групового етапу і сітка плей-оф. Призовий фонд нараховує мінімум 500 тисяч доларів і 3,5 тисячі DPC очок.
+										</p>
+										<p>
+											Також існують спонсорські турніри, типу DreamLeague. Конкретно цей турнір часто проходить онлайн і не входить в рейтинги DPC. Участь в турнірі беруть 16 команд, які отримують заздалегідь запрошення на участь. Призовий фонд солідний – 1.000.000 доларів, і вони діляться між всіма командами, залежно від результатів.
+										</p>
+										<p>
+											Представлені вище турніри вважаються найкращими, а брати участь в них мріє кожна команда: як новачки, так і профі. Звичайно ж, є ряд і інших турнірів, в яких команди беруть участь, вище названі тільки деякі з найбільш очікуваних кожного року.
+										</p>
+										<p>
+											Переглянути всю необхідну інформацію по поточним і майбутнім професійним турнірам можна на цьому сайті в розділі, в якому ви зараз перебуваєте. Тут же передбачені кілька параметрів (рік проведення, регіон і тип), щоб ви знайшли потрібні змагання, дізналися про команди і учасників, а подивилися призовий фонд і переможця (якщо турнір вже пройшов).
+										</p>
+									</div>
+									<div class="information__aside">
+										<div class="information__menu menu">
+											<nav class="menu__body">
+												<ul class="menu__list">
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Турніри
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Команди і інтерактивна мапа
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Матчі
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Трансфери
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+													<li class="menu__item">
+														<a href="#" class="menu__link">
+															Блог
+															<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M7.88833 5.22233H25.0855L0 30.3078L3.69219 34L28.7777 8.91452V26.1117H34V0H7.88833V5.22233Z" fill="#2C2C2E" />
+															</svg>
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__item">
+						<a href="#" class="footer__logo">
+							<img src="img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="footer__item">
+						<div class="footer__copy">
+							©2023 Сделано с любовью в Украине
+						</div>
+					</div>
+					<div class="footer__item">
+						<div class="footer__text">
+							По будь-яким питанням звертайтесь за адресою:
+						</div>
+						<a href="mailto:contact@cyberdata.pro" class="footer__link" target="_blank">
+							<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_134_46978)">
+									<path d="M1.33325 11C1.33325 7.22876 1.33325 5.34315 2.50482 4.17157C3.6764 3 5.56202 3 9.33325 3H13.3333C17.1045 3 18.9901 3 20.1617 4.17157C21.3333 5.34315 21.3333 7.22876 21.3333 11C21.3333 14.7712 21.3333 16.6569 20.1617 17.8284C18.9901 19 17.1045 19 13.3333 19H9.33325C5.56202 19 3.6764 19 2.50482 17.8284C1.33325 16.6569 1.33325 14.7712 1.33325 11Z" stroke="#919191" stroke-width="2" />
+									<path d="M5.33325 7L7.49215 8.79908C9.32878 10.3296 10.2471 11.0949 11.3333 11.0949C12.4194 11.0949 13.3377 10.3296 15.1744 8.79908L17.3333 7" stroke="#919191" stroke-width="2" stroke-linecap="round" />
+								</g>
+								<defs>
+									<clipPath id="clip0_134_46978">
+										<rect width="22" height="22" fill="white" transform="translate(0.333252)" />
+									</clipPath>
+								</defs>
+							</svg>
+							<span>contact@cyberdata.pro</span>
+						</a>
+					</div>
+					<div class="footer__item">
+						<div class="footer__dota">
+							Dota 2
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230619094203"></script>
+</body>
+
+</html>
