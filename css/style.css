@@ -5998,6 +5998,14 @@ body {
     position: static;
   }
 
+  .player .aside-navigaton {
+    position: static;
+  }
+
+  .team-detail .aside-navigaton {
+    position: static;
+  }
+
   .aside-navigaton__link svg {
     display: none;
   }
@@ -6027,6 +6035,16 @@ body {
     opacity: 1;
     pointer-events: all;
     visibility: visible;
+  }
+}
+
+@media (min-width: 70.625em) {
+  .player .aside-navigaton {
+    position: sticky;
+  }
+
+  .team-detail .aside-navigaton {
+    position: sticky;
   }
 }
 
