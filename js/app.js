@@ -2297,7 +2297,7 @@
         el.classList.add(...classNames);
         swiper.emitContainerClasses();
     }
-    function removeClasses_removeClasses() {
+    function removeClasses() {
         const swiper = this;
         const {el, classNames} = swiper;
         el.classList.remove(...classNames);
@@ -2305,7 +2305,7 @@
     }
     const classes = {
         addClasses,
-        removeClasses: removeClasses_removeClasses
+        removeClasses
     };
     function checkOverflow() {
         const swiper = this;
