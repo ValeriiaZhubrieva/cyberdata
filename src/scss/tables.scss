@@ -50,6 +50,12 @@
             grid-template-columns: 1fr;
         }
     }
+    &.double-ellimination-4-3 {
+        grid-template-columns: 1fr;
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
     // .playoffs__top-grid
     &__top-grid {
         .ellimination-16 & {
@@ -238,6 +244,28 @@
                 }
             }
         }
+        .double-ellimination-4-3 & {
+            grid-template-columns: repeat(3, 218px);
+            .playoffs__column {
+                &:nth-child(1) {
+                    padding: rem(16) 0 0 0;
+                }
+                &:nth-child(3) {
+                    padding: rem(13) 0 0 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 150px);
+                .playoffs__column {
+                    &:nth-child(1) {
+                        padding: rem(6) 0 0 0;
+                    }
+                    &:nth-child(3) {
+                        padding: rem(10) 0 0 0;
+                    }
+                }
+            }
+        }
     }
     // .playoffs__bottom-grid
     &__bottom-grid {
@@ -405,6 +433,30 @@
                 .playoffs__column {
                     &:nth-child(3) {
                         padding: rem(10) 0 0 0;
+                    }
+                }
+            }
+        }
+        .double-ellimination-4-3 & {
+            grid-template-columns: repeat(3, 218px);
+            .playoffs__column {
+                &:nth-child(1) {
+                    padding: rem(75) 0 0 0;
+                }
+                &:nth-child(3) {
+                    padding: rem(13) 0 0 0;
+                    justify-content: space-around;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 150px);
+                .playoffs__column {
+                    &:nth-child(1) {
+                        padding: rem(65) 0 0 0;
+                    }
+                    &:nth-child(3) {
+                        padding: rem(10) 0 0 0;
+                        justify-content: space-around;
                     }
                 }
             }
