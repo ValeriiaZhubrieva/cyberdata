@@ -1,0 +1,63 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+    display: grid;
+    gap: 15px;
+}
+// Спойлер
+.spollers__item {
+}
+// Заголовок спойлера
+.spollers__title {
+    width: 100%;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: rem(20);
+    border: 2px solid #36363e;
+    border-radius: rem(10);
+    position: relative;
+    list-style: none;
+    transition: border 0.3s;
+    svg {
+        transition: transform 0.3s;
+        path {
+            transition: all 0.3s;
+        }
+    }
+    &:not(:last-child) {
+        margin-bottom: rem(10);
+    }
+    ._spoller-init & {
+        cursor: pointer;
+        &._spoller-active {
+            border: 2px solid $orangeColor;
+            svg {
+                transform: rotate(-180deg);
+                path {
+                    stroke: $orangeColor;
+                }
+            }
+        }
+    }
+    .matches__aside & {
+        margin-left: auto;
+        max-width: 49%;
+    }
+    @media (min-width: em(1100)) {
+        display: none;
+    }
+}
+// Контент спойлера
+.spollers__body {
+}
+
+.spollers__slide {
+    transition-property: height, margin, padding;
+    transition-duration: 500ms;
+    overflow: hidden;
+}
