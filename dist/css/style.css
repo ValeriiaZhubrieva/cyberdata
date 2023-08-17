@@ -4969,8 +4969,8 @@ body {
 .player-table {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(400px, 1fr) minmax(150px, 396px) minmax(150px, 396px);
-  grid-template-columns: minmax(400px, 1fr) minmax(150px, 396px) minmax(150px, 396px);
+  -ms-grid-columns: minmax(400px, 1fr) minmax(150px, 250px) minmax(150px, 250px) minmax(150px, 250px);
+  grid-template-columns: minmax(400px, 1fr) minmax(150px, 250px) minmax(150px, 250px) minmax(150px, 250px);
   background-color: #1d1d1e;
   border-radius: 0.625rem;
   padding: 1.875rem 1.25rem;
@@ -5194,6 +5194,33 @@ body {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+}
+
+.player-table__rank {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  position: relative;
+}
+
+.player-table__rank img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.player-table__rank-number {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
 }
 
 .player-table__text {
@@ -8459,6 +8486,13 @@ body {
   }
 }
 
+@media (max-width: 81.24875em) {
+  .player__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 76.875em) {
   .tournament__body {
     -ms-grid-columns: 1fr;
@@ -8483,11 +8517,6 @@ body {
 
 @media (max-width: 70.625em) {
   .team-detail__body {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
-  .player__body {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
@@ -8863,6 +8892,11 @@ body {
   .players__head {
     margin-left: 0.0000000625rem;
   }
+
+  .player-table {
+    -ms-grid-columns: minmax(350px, 1fr) minmax(150px, 220px) minmax(150px, 220px) minmax(150px, 220px);
+    grid-template-columns: minmax(350px, 1fr) minmax(150px, 220px) minmax(150px, 220px) minmax(150px, 220px);
+  }
 }
 
 @media (max-width: 60.625em) {
@@ -9101,11 +9135,6 @@ body {
     font-size: 0.875rem;
   }
 
-  .player-table {
-    -ms-grid-columns: minmax(350px, 1fr) minmax(150px, 396px) minmax(150px, 396px);
-    grid-template-columns: minmax(350px, 1fr) minmax(150px, 396px) minmax(150px, 396px);
-  }
-
   .player-table__player {
     -ms-grid-columns: 100px 1fr;
     grid-template-columns: 100px 1fr;
@@ -9236,6 +9265,13 @@ body {
   .results-prizes__text {
     display: block;
     width: 100%;
+  }
+}
+
+@media (max-width: 56.24875em) {
+  .player-table {
+    -ms-grid-columns: minmax(300px, 1fr) minmax(130px, 220px) minmax(130px, 220px) minmax(130px, 220px);
+    grid-template-columns: minmax(300px, 1fr) minmax(130px, 220px) minmax(130px, 220px) minmax(130px, 220px);
   }
 }
 
@@ -9834,6 +9870,16 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 1rem;
+  }
+
+  .player-table__rank {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .player-table__rank-number {
+    font-size: 0.6875rem;
+    bottom: 5px;
   }
 
   .player-table__text {
@@ -11061,6 +11107,12 @@ body {
   .player-table {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
+  }
+
+  .player-table__rank {
+    margin: 0 auto;
+    width: 3.125rem;
+    height: 3.125rem;
   }
 
   .dropdown-team {

@@ -23,7 +23,7 @@ function initSliders() {
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 20,
-            autoHeight: true,
+            autoHeight: false,
             speed: 800,
             autoplay: {
 				delay: 3000,
