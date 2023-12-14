@@ -38,4 +38,3 @@ if (document.querySelector('.aside-filter__inner-near')) {
         }
     })
 }
-

@@ -97,7 +97,7 @@
                     padding-bottom: rem(47);
                 }
             }
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 .playoffs__column {
                     &:nth-child(1) {
                         padding-top: rem(34);
@@ -236,7 +236,7 @@
                     padding: 0 0 rem(30) 0;
                 }
             }
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 .playoffs__column {
                     &:nth-child(1) {
                         padding: rem(40) 0 0 0;
@@ -319,7 +319,7 @@
                     padding-bottom: rem(40);
                 }
             }
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 .playoffs__column {
                     &:nth-child(2) {
                         padding-bottom: rem(40);
@@ -338,7 +338,7 @@
                     padding-top: rem(40);
                 }
                 &:nth-child(2) {
-                    justify-content: start;
+                    justify-content: flex-start;
                 }
                 &:nth-child(3) {
                     justify-content: center;
@@ -429,7 +429,7 @@
                     padding-bottom: rem(58);
                 }
             }
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 .playoffs__column {
                     &:nth-child(3) {
                         padding: rem(10) 0 0 0;
@@ -465,7 +465,7 @@
     // .playoffs__column
     &__column {
         .ellimination-16 & {
-            justify-content: start;
+            justify-content: flex-start;
         }
     }
     // .playoffs__cell
@@ -596,7 +596,7 @@
             }
         }
         .ellimination-16-2 & {
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 &.final {
                     svg {
                         height: 275px;

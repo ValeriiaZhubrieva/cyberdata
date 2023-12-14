@@ -4,7 +4,7 @@
     .transfers,
     .block-matches {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 60, 30);
+            @include adaptiveValue('margin-bottom', 60, 30);
         }
     }
     // .team-detail__body
@@ -12,7 +12,7 @@
         display: grid;
         grid-template-columns: 280px 1fr;
         gap: rem(30);
-        @include adaptiveValue("gap", 30, 10);
+        @include adaptiveValue('gap', 30, 10);
         @media (max-width: em(1130)) {
             grid-template-columns: 1fr;
         }
@@ -20,7 +20,7 @@
     // .team-detail__inner
     &__inner {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 60, 30);
+            @include adaptiveValue('margin-bottom', 60, 30);
         }
     }
     // .team-detail__table
@@ -34,7 +34,7 @@
     border-radius: rem(10);
     padding: rem(30) 0;
     &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 60, 30);
+        @include adaptiveValue('margin-bottom', 60, 30);
     }
     @media (max-width: em(1450)) {
         padding: rem(20) 0;
@@ -43,7 +43,10 @@
         grid-template-columns: minmax(300px, 1fr) 230px minmax(150px, 337px) minmax(150px, 337px);
     }
     @media (max-width: em(1199)) {
-        grid-template-columns: minmax(270px, 1fr) minmax(180px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
+        grid-template-columns: minmax(270px, 1fr) minmax(180px, 1fr) minmax(150px, 1fr) minmax(
+                150px,
+                1fr
+            );
     }
     @media (max-width: em(900)) {
         grid-template-columns: 1fr;
@@ -88,7 +91,7 @@
     }
     // .team-info__team
     &__team {
-        justify-content: start;
+        justify-content: flex-start;
         flex-direction: row;
         column-gap: rem(30);
         @media (max-width: em(1400)) {
@@ -108,7 +111,7 @@
         img {
             max-width: 100%;
             max-height: rem(120);
-            object-fit: cover;
+            object-fit: contain;
         }
         @media (max-width: em(1400)) {
             flex: 0 0 rem(100);
@@ -119,7 +122,7 @@
             img {
                 max-width: 100%;
                 max-height: rem(80);
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
@@ -130,7 +133,7 @@
     &__name {
         font-family: CeraPro;
         font-weight: 900;
-        @include adaptiveValue("font-size", 24, 18);
+        @include adaptiveValue('font-size', 24, 18);
         line-height: 1.3;
         color: #ffffff;
         overflow: hidden;
@@ -289,7 +292,7 @@
     // .team-composition__head
     &__head {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 40, 16);
+            @include adaptiveValue('margin-bottom', 40, 16);
         }
     }
     // .team-composition__title
@@ -357,7 +360,7 @@
         img {
             max-width: 100%;
             max-height: rem(160);
-            object-fit: cover;
+            object-fit: contain;
         }
         @media (max-width: em(600)) {
             width: rem(100);
@@ -385,7 +388,7 @@
     &__nickname {
         text-align: center;
         font-weight: 700;
-        @include adaptiveValue("font-size", 24, 16);
+        @include adaptiveValue('font-size', 24, 16);
         line-height: 1.3;
         color: #ffffff;
         transition: color 0.3s;
@@ -419,7 +422,7 @@
         @media (max-width: em(600)) {
             font-size: rem(12);
             .team-composition__item-captain & {
-                justify-content: start;
+                justify-content: flex-start;
             }
         }
     }

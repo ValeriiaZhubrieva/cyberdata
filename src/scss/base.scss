@@ -1,44 +1,42 @@
 // Загальний файл елементів форм
 // Для підключення/відключення стилів конкретного елемента форми дивись base/forms/forms.scss
-@import "base/forms/forms";
-
+@import 'base/forms/forms';
 
 // Стилі спойлерів
-@import "base/spollers";
+@import 'base/spollers';
+// Свої стилі чвайпера
+@import 'base/swiper';
 
 // Стилі для чуйних картинок (IBG)
-[class*="-ibg"] {
-	position: relative;
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		object-fit: cover;
-	}
+[class*='-ibg'] {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
 }
-
 
 // Шаблони (заготівлі)
 // @extend %ім'я шаблону;
 
-
 // Адаптивне відео
 %responsiveVideo {
-	position: relative;
-	overflow: hidden;
-	height: 0;
-	padding-bottom: 56.25%;
-	video,
-	iframe,
-	object,
-	embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
+    video,
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
-

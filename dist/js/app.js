@@ -82,6 +82,161 @@
     let _slideToggle = (target, duration = 500) => {
         if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
     };
+    let bodyLockStatus = true;
+    let bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+    };
+    let bodyUnlock = (delay = 500) => {
+        let body = document.querySelector("body");
+        if (bodyLockStatus) {
+            let lock_padding = document.querySelectorAll("[data-lp]");
+            setTimeout((() => {
+                for (let index = 0; index < lock_padding.length; index++) {
+                    const el = lock_padding[index];
+                    el.style.paddingRight = "0px";
+                }
+                body.style.paddingRight = "0px";
+                document.documentElement.classList.remove("lock");
+            }), delay);
+            bodyLockStatus = false;
+            setTimeout((function() {
+                bodyLockStatus = true;
+            }), delay);
+        }
+    };
+    let bodyLock = (delay = 500) => {
+        let body = document.querySelector("body");
+        if (bodyLockStatus) {
+            let lock_padding = document.querySelectorAll("[data-lp]");
+            for (let index = 0; index < lock_padding.length; index++) {
+                const el = lock_padding[index];
+                el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            }
+            body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            document.documentElement.classList.add("lock");
+            bodyLockStatus = false;
+            setTimeout((function() {
+                bodyLockStatus = true;
+            }), delay);
+        }
+    };
+    function getHash() {
+        if (location.hash) return location.hash.replace("#", "");
+    }
+    function tabs() {
+        const tabs = document.querySelectorAll("[data-tabs]");
+        let tabsActiveHash = [];
+        let scrollBlockHeight = 80;
+        if (tabs.length > 0) {
+            const hash = getHash();
+            if (hash && hash.startsWith("tab-")) tabsActiveHash = hash.replace("tab-", "").split("-");
+            tabs.forEach(((tabsBlock, index) => {
+                tabsBlock.classList.add("_tab-init");
+                tabsBlock.setAttribute("data-tabs-index", index);
+                tabsBlock.addEventListener("click", setTabsAction);
+                initTabs(tabsBlock);
+            }));
+            let mdQueriesArray = dataMediaQueries(tabs, "tabs");
+            if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
+                mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                    setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                }));
+                setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+            }));
+        }
+        function setTitlePosition(tabsMediaArray, matchMedia) {
+            tabsMediaArray.forEach((tabsMediaItem => {
+                tabsMediaItem = tabsMediaItem.item;
+                let tabsTitles = tabsMediaItem.querySelector("[data-tabs-titles]");
+                let tabsTitleItems = tabsMediaItem.querySelectorAll("[data-tabs-title]");
+                let tabsContent = tabsMediaItem.querySelector("[data-tabs-body]");
+                let tabsContentItems = tabsMediaItem.querySelectorAll("[data-tabs-item]");
+                tabsTitleItems = Array.from(tabsTitleItems).filter((item => item.closest("[data-tabs]") === tabsMediaItem));
+                tabsContentItems = Array.from(tabsContentItems).filter((item => item.closest("[data-tabs]") === tabsMediaItem));
+                tabsContentItems.forEach(((tabsContentItem, index) => {
+                    if (matchMedia.matches) {
+                        tabsContent.append(tabsTitleItems[index]);
+                        tabsContent.append(tabsContentItem);
+                        tabsMediaItem.classList.add("_tab-spoller");
+                    } else {
+                        tabsTitles.append(tabsTitleItems[index]);
+                        tabsMediaItem.classList.remove("_tab-spoller");
+                    }
+                }));
+            }));
+        }
+        function initTabs(tabsBlock) {
+            let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-titles]>*");
+            let tabsContent = tabsBlock.querySelectorAll("[data-tabs-body]>*");
+            const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+            const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
+            if (tabsActiveHashBlock) {
+                const tabsActiveTitle = tabsBlock.querySelector("[data-tabs-titles]>._tab-active");
+                tabsActiveTitle ? tabsActiveTitle.classList.remove("_tab-active") : null;
+            }
+            if (tabsContent.length) tabsContent.forEach(((tabsContentItem, index) => {
+                tabsTitles[index].setAttribute("data-tabs-title", "");
+                tabsContentItem.setAttribute("data-tabs-item", "");
+                if (tabsActiveHashBlock && index == tabsActiveHash[1]) tabsTitles[index].classList.add("_tab-active");
+                tabsContentItem.hidden = !tabsTitles[index].classList.contains("_tab-active");
+            }));
+        }
+        function scrollToTopOfElement(elementBlock, height) {
+            if (elementBlock) {
+                const offset = elementBlock.offsetTop - height;
+                window.scrollTo({
+                    top: offset,
+                    behavior: "smooth"
+                });
+            }
+        }
+        function setTabsStatus(tabsBlock) {
+            let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-title]");
+            let tabsContent = tabsBlock.querySelectorAll("[data-tabs-item]");
+            const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+            function isTabsAnamate(tabsBlock) {
+                if (tabsBlock.hasAttribute("data-tabs-animate")) return tabsBlock.dataset.tabsAnimate > 0 ? Number(tabsBlock.dataset.tabsAnimate) : 500;
+            }
+            const tabsBlockAnimate = isTabsAnamate(tabsBlock);
+            if (tabsContent.length > 0) {
+                const isHash = tabsBlock.hasAttribute("data-tabs-hash");
+                tabsContent = Array.from(tabsContent).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                tabsTitles = Array.from(tabsTitles).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                tabsContent.forEach(((tabsContentItem, index) => {
+                    if (tabsTitles[index].classList.contains("_tab-active")) {
+                        if (tabsBlockAnimate) _slideDown(tabsContentItem, tabsBlockAnimate); else {
+                            tabsContentItem.hidden = false;
+                            scrollToTopOfElement(tabsContentItem, scrollBlockHeight);
+                        }
+                        if (isHash && !tabsContentItem.closest(".popup")) setHash(`tab-${tabsBlockIndex}-${index}`);
+                    } else if (tabsBlockAnimate) _slideUp(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = true;
+                }));
+            }
+        }
+        function setTabsAction(e) {
+            const el = e.target;
+            if (el.closest("[data-tabs-title]")) {
+                const tabTitle = el.closest("[data-tabs-title]");
+                const tabsBlock = tabTitle.closest("[data-tabs]");
+                if (!tabTitle.classList.contains("_tab-active") && !tabsBlock.querySelector("._slide")) {
+                    let tabActiveTitle = tabsBlock.querySelectorAll("[data-tabs-title]._tab-active");
+                    tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter((item => item.closest("[data-tabs]") === tabsBlock)) : null;
+                    tabActiveTitle.length ? tabActiveTitle[0].classList.remove("_tab-active") : null;
+                    tabTitle.classList.add("_tab-active");
+                    setTabsStatus(tabsBlock);
+                }
+                e.preventDefault();
+            }
+        }
+    }
+    function menuInit() {
+        if (document.querySelector(".icon-menu") || document.querySelector(".menu__close")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".icon-menu") || bodyLockStatus && e.target.closest(".menu__close")) {
+                bodyLockToggle();
+                document.documentElement.classList.toggle("menu-open");
+            }
+        }));
+    }
     function spollers() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
         if (spollersArray.length > 0) {
@@ -3325,257 +3480,93 @@
             destroy
         });
     }
-    function Autoplay({swiper, extendParams, on, emit, params}) {
-        swiper.autoplay = {
-            running: false,
-            paused: false,
-            timeLeft: 0
-        };
+    function Grid({swiper, extendParams}) {
         extendParams({
-            autoplay: {
-                enabled: false,
-                delay: 3e3,
-                waitForTransition: true,
-                disableOnInteraction: true,
-                stopOnLastSlide: false,
-                reverseDirection: false,
-                pauseOnMouseEnter: false
+            grid: {
+                rows: 1,
+                fill: "column"
             }
         });
-        let timeout;
-        let raf;
-        let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3e3;
-        let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3e3;
-        let autoplayTimeLeft;
-        let autoplayStartTime = (new Date).getTime;
-        let wasPaused;
-        let isTouched;
-        let pausedByTouch;
-        let touchStartTimeout;
-        let slideChanged;
-        let pausedByInteraction;
-        function onTransitionEnd(e) {
-            if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;
-            if (e.target !== swiper.wrapperEl) return;
-            swiper.wrapperEl.removeEventListener("transitionend", onTransitionEnd);
-            resume();
-        }
-        const calcTimeLeft = () => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            if (swiper.autoplay.paused) wasPaused = true; else if (wasPaused) {
-                autoplayDelayCurrent = autoplayTimeLeft;
-                wasPaused = false;
-            }
-            const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - (new Date).getTime();
-            swiper.autoplay.timeLeft = timeLeft;
-            emit("autoplayTimeLeft", timeLeft, timeLeft / autoplayDelayTotal);
-            raf = requestAnimationFrame((() => {
-                calcTimeLeft();
-            }));
+        let slidesNumberEvenToRows;
+        let slidesPerRow;
+        let numFullColumns;
+        const getSpaceBetween = () => {
+            let spaceBetween = swiper.params.spaceBetween;
+            if (typeof spaceBetween === "string" && spaceBetween.indexOf("%") >= 0) spaceBetween = parseFloat(spaceBetween.replace("%", "")) / 100 * swiper.size; else if (typeof spaceBetween === "string") spaceBetween = parseFloat(spaceBetween);
+            return spaceBetween;
         };
-        const getSlideDelay = () => {
-            let activeSlideEl;
-            if (swiper.virtual && swiper.params.virtual.enabled) activeSlideEl = swiper.slides.filter((slideEl => slideEl.classList.contains("swiper-slide-active")))[0]; else activeSlideEl = swiper.slides[swiper.activeIndex];
-            if (!activeSlideEl) return;
-            const currentSlideDelay = parseInt(activeSlideEl.getAttribute("data-swiper-autoplay"), 10);
-            return currentSlideDelay;
+        const initSlides = slidesLength => {
+            const {slidesPerView} = swiper.params;
+            const {rows, fill} = swiper.params.grid;
+            slidesPerRow = slidesNumberEvenToRows / rows;
+            numFullColumns = Math.floor(slidesLength / rows);
+            if (Math.floor(slidesLength / rows) === slidesLength / rows) slidesNumberEvenToRows = slidesLength; else slidesNumberEvenToRows = Math.ceil(slidesLength / rows) * rows;
+            if (slidesPerView !== "auto" && fill === "row") slidesNumberEvenToRows = Math.max(slidesNumberEvenToRows, slidesPerView * rows);
         };
-        const run = delayForce => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            cancelAnimationFrame(raf);
-            calcTimeLeft();
-            let delay = typeof delayForce === "undefined" ? swiper.params.autoplay.delay : delayForce;
-            autoplayDelayTotal = swiper.params.autoplay.delay;
-            autoplayDelayCurrent = swiper.params.autoplay.delay;
-            const currentSlideDelay = getSlideDelay();
-            if (!Number.isNaN(currentSlideDelay) && currentSlideDelay > 0 && typeof delayForce === "undefined") {
-                delay = currentSlideDelay;
-                autoplayDelayTotal = currentSlideDelay;
-                autoplayDelayCurrent = currentSlideDelay;
-            }
-            autoplayTimeLeft = delay;
-            const speed = swiper.params.speed;
-            const proceed = () => {
-                if (!swiper || swiper.destroyed) return;
-                if (swiper.params.autoplay.reverseDirection) {
-                    if (!swiper.isBeginning || swiper.params.loop || swiper.params.rewind) {
-                        swiper.slidePrev(speed, true, true);
-                        emit("autoplay");
-                    } else if (!swiper.params.autoplay.stopOnLastSlide) {
-                        swiper.slideTo(swiper.slides.length - 1, speed, true, true);
-                        emit("autoplay");
+        const updateSlide = (i, slide, slidesLength, getDirectionLabel) => {
+            const {slidesPerGroup} = swiper.params;
+            const spaceBetween = getSpaceBetween();
+            const {rows, fill} = swiper.params.grid;
+            let newSlideOrderIndex;
+            let column;
+            let row;
+            if (fill === "row" && slidesPerGroup > 1) {
+                const groupIndex = Math.floor(i / (slidesPerGroup * rows));
+                const slideIndexInGroup = i - rows * slidesPerGroup * groupIndex;
+                const columnsInGroup = groupIndex === 0 ? slidesPerGroup : Math.min(Math.ceil((slidesLength - groupIndex * rows * slidesPerGroup) / rows), slidesPerGroup);
+                row = Math.floor(slideIndexInGroup / columnsInGroup);
+                column = slideIndexInGroup - row * columnsInGroup + groupIndex * slidesPerGroup;
+                newSlideOrderIndex = column + row * slidesNumberEvenToRows / rows;
+                slide.style.order = newSlideOrderIndex;
+            } else if (fill === "column") {
+                column = Math.floor(i / rows);
+                row = i - column * rows;
+                if (column > numFullColumns || column === numFullColumns && row === rows - 1) {
+                    row += 1;
+                    if (row >= rows) {
+                        row = 0;
+                        column += 1;
                     }
-                } else if (!swiper.isEnd || swiper.params.loop || swiper.params.rewind) {
-                    swiper.slideNext(speed, true, true);
-                    emit("autoplay");
-                } else if (!swiper.params.autoplay.stopOnLastSlide) {
-                    swiper.slideTo(0, speed, true, true);
-                    emit("autoplay");
                 }
-                if (swiper.params.cssMode) {
-                    autoplayStartTime = (new Date).getTime();
-                    requestAnimationFrame((() => {
-                        run();
-                    }));
+            } else {
+                row = Math.floor(i / slidesPerRow);
+                column = i - row * slidesPerRow;
+            }
+            slide.style[getDirectionLabel("margin-top")] = row !== 0 ? spaceBetween && `${spaceBetween}px` : "";
+        };
+        const updateWrapperSize = (slideSize, snapGrid, getDirectionLabel) => {
+            const {centeredSlides, roundLengths} = swiper.params;
+            const spaceBetween = getSpaceBetween();
+            const {rows} = swiper.params.grid;
+            swiper.virtualSize = (slideSize + spaceBetween) * slidesNumberEvenToRows;
+            swiper.virtualSize = Math.ceil(swiper.virtualSize / rows) - spaceBetween;
+            swiper.wrapperEl.style[getDirectionLabel("width")] = `${swiper.virtualSize + spaceBetween}px`;
+            if (centeredSlides) {
+                const newSlidesGrid = [];
+                for (let i = 0; i < snapGrid.length; i += 1) {
+                    let slidesGridItem = snapGrid[i];
+                    if (roundLengths) slidesGridItem = Math.floor(slidesGridItem);
+                    if (snapGrid[i] < swiper.virtualSize + snapGrid[0]) newSlidesGrid.push(slidesGridItem);
                 }
-            };
-            if (delay > 0) {
-                clearTimeout(timeout);
-                timeout = setTimeout((() => {
-                    proceed();
-                }), delay);
-            } else requestAnimationFrame((() => {
-                proceed();
-            }));
-            return delay;
-        };
-        const start = () => {
-            swiper.autoplay.running = true;
-            run();
-            emit("autoplayStart");
-        };
-        const stop = () => {
-            swiper.autoplay.running = false;
-            clearTimeout(timeout);
-            cancelAnimationFrame(raf);
-            emit("autoplayStop");
-        };
-        const pause = (internal, reset) => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            clearTimeout(timeout);
-            if (!internal) pausedByInteraction = true;
-            const proceed = () => {
-                emit("autoplayPause");
-                if (swiper.params.autoplay.waitForTransition) swiper.wrapperEl.addEventListener("transitionend", onTransitionEnd); else resume();
-            };
-            swiper.autoplay.paused = true;
-            if (reset) {
-                if (slideChanged) autoplayTimeLeft = swiper.params.autoplay.delay;
-                slideChanged = false;
-                proceed();
-                return;
-            }
-            const delay = autoplayTimeLeft || swiper.params.autoplay.delay;
-            autoplayTimeLeft = delay - ((new Date).getTime() - autoplayStartTime);
-            if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop) return;
-            if (autoplayTimeLeft < 0) autoplayTimeLeft = 0;
-            proceed();
-        };
-        const resume = () => {
-            if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running) return;
-            autoplayStartTime = (new Date).getTime();
-            if (pausedByInteraction) {
-                pausedByInteraction = false;
-                run(autoplayTimeLeft);
-            } else run();
-            swiper.autoplay.paused = false;
-            emit("autoplayResume");
-        };
-        const onVisibilityChange = () => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            const document = ssr_window_esm_getDocument();
-            if (document.visibilityState === "hidden") {
-                pausedByInteraction = true;
-                pause(true);
-            }
-            if (document.visibilityState === "visible") resume();
-        };
-        const onPointerEnter = e => {
-            if (e.pointerType !== "mouse") return;
-            pausedByInteraction = true;
-            pause(true);
-        };
-        const onPointerLeave = e => {
-            if (e.pointerType !== "mouse") return;
-            if (swiper.autoplay.paused) resume();
-        };
-        const attachMouseEvents = () => {
-            if (swiper.params.autoplay.pauseOnMouseEnter) {
-                swiper.el.addEventListener("pointerenter", onPointerEnter);
-                swiper.el.addEventListener("pointerleave", onPointerLeave);
+                snapGrid.splice(0, snapGrid.length);
+                snapGrid.push(...newSlidesGrid);
             }
         };
-        const detachMouseEvents = () => {
-            swiper.el.removeEventListener("pointerenter", onPointerEnter);
-            swiper.el.removeEventListener("pointerleave", onPointerLeave);
+        swiper.grid = {
+            initSlides,
+            updateSlide,
+            updateWrapperSize
         };
-        const attachDocumentEvents = () => {
-            const document = ssr_window_esm_getDocument();
-            document.addEventListener("visibilitychange", onVisibilityChange);
-        };
-        const detachDocumentEvents = () => {
-            const document = ssr_window_esm_getDocument();
-            document.removeEventListener("visibilitychange", onVisibilityChange);
-        };
-        on("init", (() => {
-            if (swiper.params.autoplay.enabled) {
-                attachMouseEvents();
-                attachDocumentEvents();
-                autoplayStartTime = (new Date).getTime();
-                start();
-            }
-        }));
-        on("destroy", (() => {
-            detachMouseEvents();
-            detachDocumentEvents();
-            if (swiper.autoplay.running) stop();
-        }));
-        on("beforeTransitionStart", ((_s, speed, internal) => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            if (internal || !swiper.params.autoplay.disableOnInteraction) pause(true, true); else stop();
-        }));
-        on("sliderFirstMove", (() => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            if (swiper.params.autoplay.disableOnInteraction) {
-                stop();
-                return;
-            }
-            isTouched = true;
-            pausedByTouch = false;
-            pausedByInteraction = false;
-            touchStartTimeout = setTimeout((() => {
-                pausedByInteraction = true;
-                pausedByTouch = true;
-                pause(true);
-            }), 200);
-        }));
-        on("touchEnd", (() => {
-            if (swiper.destroyed || !swiper.autoplay.running || !isTouched) return;
-            clearTimeout(touchStartTimeout);
-            clearTimeout(timeout);
-            if (swiper.params.autoplay.disableOnInteraction) {
-                pausedByTouch = false;
-                isTouched = false;
-                return;
-            }
-            if (pausedByTouch && swiper.params.cssMode) resume();
-            pausedByTouch = false;
-            isTouched = false;
-        }));
-        on("slideChange", (() => {
-            if (swiper.destroyed || !swiper.autoplay.running) return;
-            slideChanged = true;
-        }));
-        Object.assign(swiper.autoplay, {
-            start,
-            stop,
-            pause,
-            resume
-        });
     }
     function initSliders() {
         if (document.querySelector(".promo__slider")) new core(".promo__slider", {
-            modules: [ Pagination, Autoplay ],
+            modules: [ Pagination ],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 20,
-            autoHeight: false,
+            autoHeight: true,
             speed: 800,
-            autoplay: {
-                delay: 3e3,
-                disableOnInteraction: false
-            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
@@ -3583,27 +3574,66 @@
             on: {}
         });
         if (document.querySelector(".tournaments-timeline__slider")) new core(".tournaments-timeline__slider", {
-            modules: [ Navigation ],
+            modules: [ Navigation, Pagination, Grid ],
             observer: true,
             observeParents: true,
-            slidesPerView: 1,
-            centeredSlides: true,
-            spaceBetween: 0,
-            autoHeight: true,
+            slidesPerView: 8,
+            spaceBetween: 10,
             speed: 800,
-            initialSlide: 1,
-            touchRatio: 0,
-            simulateTouch: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
             navigation: {
                 prevEl: ".tournaments-timeline__slider .swiper-button-prev",
                 nextEl: ".tournaments-timeline__slider .swiper-button-next"
             },
             breakpoints: {
-                1600: {
-                    slidesPerView: 1.2
+                319: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                    centeredSlides: true,
+                    grid: {
+                        fill: "row",
+                        rows: 2
+                    }
                 },
-                1800: {
-                    slidesPerView: 2
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                    centeredSlides: false,
+                    grid: {
+                        fill: "row",
+                        rows: 2
+                    }
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                    grid: {
+                        fill: "row",
+                        rows: 2
+                    }
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                1100: {
+                    slidesPerView: 5,
+                    spaceBetween: 10
+                },
+                1300: {
+                    slidesPerView: 6,
+                    spaceBetween: 10
+                },
+                1600: {
+                    slidesPerView: 7,
+                    spaceBetween: 10
+                },
+                1700: {
+                    slidesPerView: 8,
+                    spaceBetween: 10
                 }
             },
             on: {}
@@ -3718,5 +3748,7 @@
         }));
     }
     isWebp();
+    menuInit();
     spollers();
+    tabs();
 })();

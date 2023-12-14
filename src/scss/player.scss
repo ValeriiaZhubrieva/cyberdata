@@ -9,7 +9,7 @@
         display: grid;
         grid-template-columns: 280px 1fr;
         gap: rem(30);
-        @include adaptiveValue("gap", 30, 10);
+        @include adaptiveValue('gap', 30, 10);
         @media (max-width: em(1299.98)) {
             grid-template-columns: 1fr;
         }
@@ -23,31 +23,45 @@
     // .player__inner
     &__inner {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 60, 30);
+            @include adaptiveValue('margin-bottom', 60, 30);
         }
     }
     // .player__info
     &__info {
     }
 }
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .player-table {
     display: grid;
-    grid-template-columns: minmax(400px, 1fr) minmax(150px, 250px) minmax(150px, 250px) minmax(150px, 250px);
+    grid-template-columns: minmax(400px, 1fr) minmax(150px, 250px) minmax(150px, 250px) minmax(
+            150px,
+            250px
+        );
     background-color: #1d1d1e;
     border-radius: rem(10);
     padding: rem(30) rem(20);
-    @media (max-width: $tablet){
-        grid-template-columns: minmax(350px, 1fr) minmax(150px, 220px) minmax(150px, 220px) minmax(150px, 220px);
+    @media (max-width: $tablet) {
+        grid-template-columns: minmax(350px, 1fr) minmax(150px, 220px) minmax(150px, 220px) minmax(
+                150px,
+                220px
+            );
     }
-    @media (max-width: em(899.98)){
-        grid-template-columns: minmax(300px, 1fr) minmax(130px, 220px) minmax(130px, 220px) minmax(130px, 220px);
+    @media (max-width: em(899.98)) {
+        grid-template-columns: minmax(300px, 1fr) minmax(130px, 220px) minmax(130px, 220px) minmax(
+                130px,
+                220px
+            );
     }
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
         grid-template-columns: 1fr;
         gap: rem(8);
         padding: rem(20);
     }
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
         margin-left: rem(-20);
         margin-right: rem(-20);
     }
@@ -62,8 +76,8 @@
         &:not(:last-child) {
             border-right: 2px solid #343437;
         }
-        @media (max-width:$mobile){
-            justify-content: start;
+        @media (max-width: $mobile) {
+            justify-content: flex-start;
             flex-direction: row;
             padding: 0;
             &:not(:last-child) {
@@ -79,10 +93,10 @@
         align-items: start;
         column-gap: rem(30);
         row-gap: rem(18);
-        @media (max-width: em(900)){
+        @media (max-width: em(900)) {
             grid-template-columns: 100px 1fr;
         }
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             gap: rem(16);
             border-bottom: 2px solid #343437;
             padding-bottom: rem(16);
@@ -102,7 +116,7 @@
         img {
             max-width: 100%;
             max-height: rem(160);
-            object-fit: cover;
+            object-fit: contain;
         }
         @media (max-width: em(900)) {
             flex: 0 0 rem(100);
@@ -112,7 +126,7 @@
                 max-height: rem(100);
             }
         }
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             grid-row: auto;
         }
     }
@@ -121,7 +135,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: rem(18);
-        @media (max-width: em(900)){
+        @media (max-width: em(900)) {
             gap: rem(10);
         }
     }
@@ -129,12 +143,12 @@
     &__nickname {
         font-family: CeraPro;
         font-weight: 900;
-        @include adaptiveValue("font-size", 24, 18);
+        @include adaptiveValue('font-size', 24, 18);
         line-height: 1.3;
         color: #ffffff;
         overflow: hidden;
         text-overflow: ellipsis;
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             width: 100%;
             order: 1;
         }
@@ -155,7 +169,7 @@
             border-radius: rem(4);
             padding: rem(5) rem(10);
         }
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             order: 3;
         }
     }
@@ -165,10 +179,10 @@
         line-height: 1.3;
         overflow: hidden;
         text-overflow: ellipsis;
-        @media (max-width: em(900)){
+        @media (max-width: em(900)) {
             font-size: rem(12);
         }
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             order: 2;
         }
     }
@@ -179,7 +193,7 @@
         flex-direction: column;
         align-items: start;
         gap: rem(20);
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             grid-column: span 2;
             align-items: center;
             flex-wrap: wrap;
@@ -226,7 +240,7 @@
         cursor: pointer;
         transition: color 0.3s;
         &::before {
-            content: "";
+            content: '';
             display: block;
             width: 100%;
             height: 0;
@@ -235,8 +249,8 @@
             left: 0;
             bottom: -10px;
         }
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 color: $orangeColor;
                 &::before {
                     height: rem(10);
@@ -249,7 +263,7 @@
                 }
             }
         }
-        @media (max-width: em(900)){
+        @media (max-width: em(900)) {
             font-size: rem(12);
         }
     }
@@ -266,7 +280,7 @@
         img {
             max-width: 100%;
             max-height: rem(24);
-            object-fit: cover;
+            object-fit: contain;
         }
     }
     // .player-table__team-name
@@ -292,14 +306,16 @@
             height: auto;
             object-fit: cover;
         }
-        @media (max-width:$mobile){
-            width: rem(60);
-            height: rem(60);
+        @media (max-width: em(900)) {
+            width: rem(80);
+            height: rem(80);
         }
-        @media (max-width:$mobileSmall){
+        @media (max-width: $mobile) {
+            width: rem(40);
+            height: rem(40);
+        }
+        @media (max-width: $mobileSmall) {
             margin: 0 auto;
-            width: rem(50);
-            height: rem(50);
         }
     }
     // .player-table__rank-number
@@ -309,10 +325,25 @@
         bottom: 10px;
         font-size: rem(15);
         font-weight: 700;
-        transform: translate(-50%,0px);
-        @media (max-width:$mobile){
+        transform: translate(-50%, 0px);
+        @media (max-width: em(900)) {
+            bottom: 6px;
+        }
+        @media (max-width: $mobile) {
             font-size: rem(11);
-            bottom: 5px;
+            bottom: 2px;
+        }
+    }
+    &__rank-small {
+        display: none;
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+    &__rank-big {
+        display: flex;
+        @media (max-width: $mobile) {
+            display: none;
         }
     }
     // .player-table__text
@@ -322,7 +353,7 @@
         line-height: 1.3;
         text-align: center;
         color: #919191;
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             text-align: right;
         }
     }
@@ -331,10 +362,10 @@
         font-weight: 700;
         line-height: 1.3;
         text-align: center;
-        @media (max-width: em(900)){
+        @media (max-width: em(900)) {
             font-size: rem(12);
         }
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             text-align: right;
         }
     }
@@ -358,11 +389,11 @@
     transform-origin: 0 0;
     transition: all 0.3s;
     z-index: 5;
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
         flex: 0 0 rem(296);
         max-width: rem(296);
     }
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
         flex: 1 1 100%;
         min-width: 100%;
     }
@@ -391,7 +422,7 @@
                 color: $orangeColor;
             }
         }
-        @media (max-width: em(900)){
+        @media (max-width: em(900)) {
             font-size: rem(12);
         }
     }

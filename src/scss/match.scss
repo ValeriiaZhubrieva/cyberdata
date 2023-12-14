@@ -6,15 +6,8 @@
     }
     // .match__head
     &__head {
-        @include adaptiveValue(
-            "margin-left",
-            310,
-            0,
-            0,
-            $containerWidth,
-            767.98
-        );
-        @include adaptiveValue("margin-bottom", 50, 16);
+        @include adaptiveValue('margin-left', 310, 0, 0, $containerWidth, 767.98);
+        @include adaptiveValue('margin-bottom', 50, 16);
     }
     // .match__title
     &__title {
@@ -25,25 +18,26 @@
     // .match__body
     &__body {
         display: flex;
-        @include adaptiveValue("gap", 30, 16);
-        @media (max-width: $tablet) {
+        @include adaptiveValue('gap', 30, 16);
+        @media (max-width: em(1099.98)) {
             flex-wrap: wrap;
         }
     }
     // .match__aside
     &__aside {
         flex: 0 0 rem(280);
-        @media (max-width: $tablet) {
+        @media (max-width: em(1099.98)) {
             flex: 1 1 auto;
         }
     }
     // .match__content
     &__content {
+        width: 100%;
     }
     // .match__inner
     &__inner {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 60, 30);
+            @include adaptiveValue('margin-bottom', 60, 30);
         }
     }
     // .match__info
@@ -74,9 +68,9 @@
     &__head {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        @include adaptiveValue("gap", 60, 16, 0, $containerWidth, 1100);
+        @include adaptiveValue('gap', 60, 16, 0, $containerWidth, 1100);
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 30, 16);
+            @include adaptiveValue('margin-bottom', 30, 16);
         }
         @media (max-width: em(400)) {
             display: flex;
@@ -87,7 +81,7 @@
     &__teams {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        @include adaptiveValue("gap", 60, 16, 0, $containerWidth, 1100);
+        @include adaptiveValue('gap', 60, 16, 0, $containerWidth, 1100);
         @media (max-width: $mobile) {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -101,7 +95,7 @@
     &__team {
         display: grid;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         @media (max-width: $mobile) {
             justify-content: end;
         }
@@ -110,7 +104,7 @@
     &__team-reverse {
         justify-content: end;
         @media (max-width: $mobile) {
-            justify-content: start;
+            justify-content: flex-start;
         }
     }
     // .general-info__team-img
@@ -125,9 +119,9 @@
         background: #ffffff;
         border-radius: rem(10);
         img {
-            max-width: 100%;
+            max-width: 95%;
             max-height: rem(120);
-            object-fit: cover;
+            object-fit: contain;
         }
         @media (max-width: $mobile) {
             justify-self: end;
@@ -155,19 +149,19 @@
     &__players {
         display: flex;
         flex-direction: column;
-        @include adaptiveValue("gap", 20, 10);
+        @include adaptiveValue('gap', 20, 10);
     }
     // .general-info__item
     &__item {
         display: flex;
         align-items: center;
-        @include adaptiveValue("gap", 20, 8);
+        @include adaptiveValue('gap', 20, 8);
         transition: color 0.3s;
         &:first-child {
             margin-bottom: rem(10);
         }
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 color: $orangeColor;
                 .general-info__team-name,
                 .general-info__player-name {
@@ -206,7 +200,7 @@
     // .general-info__team-name
     &__team-name {
         font-weight: 700;
-        @include adaptiveValue("font-size", 24, 12);
+        @include adaptiveValue('font-size', 24, 12);
         line-height: 1.3;
         color: #ffffff;
         transition: color 0.3s;
@@ -214,11 +208,11 @@
     // .general-info__player-name
     &__player-name {
         font-weight: 700;
-        @include adaptiveValue("font-size", 16, 10);
+        @include adaptiveValue('font-size', 16, 10);
         line-height: 1.3;
         color: #ffffff;
         transition: color 0.3s;
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             color: #919191;
         }
     }
@@ -250,14 +244,14 @@
         display: block;
         text-align: center;
         font-weight: 700;
-        @include adaptiveValue("font-size", 24, 14);
+        @include adaptiveValue('font-size', 24, 14);
         line-height: 1.3;
         transition: color 0.3s;
         &:not(:last-child) {
             margin-bottom: rem(4);
         }
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 color: $orangeColor;
             }
         }
@@ -265,7 +259,7 @@
     // .general-info__text
     &__text {
         text-align: center;
-        @include adaptiveValue("font-size", 16, 12);
+        @include adaptiveValue('font-size', 16, 12);
         line-height: 1.3;
         color: #919191;
         @media (max-width: $mobile) {
@@ -280,7 +274,7 @@
         gap: rem(16);
         font-family: CeraPro;
         font-weight: 900;
-        @include adaptiveValue("font-size", 36, 24);
+        @include adaptiveValue('font-size', 36, 24);
         line-height: 1.3;
         span {
             display: grid;
@@ -307,22 +301,22 @@
         font-weight: 700;
         text-align: center;
         color: #919191;
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             color: #fff;
         }
-        @media (max-width:$mobileSmall){
+        @media (max-width: $mobileSmall) {
             font-size: rem(14);
         }
     }
 }
 .broadcasting {
     &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 60, 30);
+        @include adaptiveValue('margin-bottom', 60, 30);
     }
     // .broadcasting__head
     &__head {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 50, 16);
+            @include adaptiveValue('margin-bottom', 50, 16);
         }
     }
     // .broadcasting__title
@@ -355,12 +349,12 @@
 }
 .game {
     &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 60, 30);
+        @include adaptiveValue('margin-bottom', 60, 30);
     }
     // .game__title
     &__title {
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 40, 16);
+            @include adaptiveValue('margin-bottom', 40, 16);
         }
     }
     // .game__body
@@ -368,10 +362,10 @@
         background-color: #1d1d1e;
         border-radius: rem(10);
         padding: rem(24) rem(30);
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
             padding: rem(24) rem(20);
         }
-        @media (max-width:$mobileSmall){
+        @media (max-width: $mobileSmall) {
             margin-left: rem(-20);
             margin-right: rem(-20);
         }
@@ -381,14 +375,14 @@
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr 120px 1fr;
-        @include adaptiveValue("gap", 40, 8, 0, $containerWidth, 600);
+        @include adaptiveValue('gap', 40, 8, 0, $containerWidth, 600);
         &:not(:last-child) {
             margin-bottom: rem(20);
         }
-        @media (max-width: em(550)){
+        @media (max-width: em(550)) {
             grid-template-columns: 1fr 100px 1fr;
         }
-        @media (max-width: em(374)){
+        @media (max-width: em(374)) {
             grid-template-columns: 1fr 70px 1fr;
         }
     }
@@ -398,8 +392,8 @@
         align-items: start;
         gap: rem(10);
         transition: color 0.3s;
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 color: $orangeColor;
             }
         }
@@ -416,7 +410,7 @@
             flex-direction: row-reverse;
             text-align: right;
         }
-        @media (max-width: em(550)){
+        @media (max-width: em(550)) {
             gap: rem(8);
         }
     }
@@ -424,7 +418,7 @@
     &__team-name {
         align-self: center;
         font-weight: 700;
-        @include adaptiveValue("font-size", 16, 14, 0, $containerWidth, 550);
+        @include adaptiveValue('font-size', 16, 14, 0, $containerWidth, 550);
         line-height: 1.3;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -442,9 +436,9 @@
         img {
             max-width: 100%;
             max-height: rem(30);
-            object-fit: cover;
+            object-fit: contain;
         }
-        @media (max-width: em(550)){
+        @media (max-width: em(550)) {
             flex: 0 0 rem(30);
             width: rem(30);
             height: rem(30);
@@ -476,7 +470,7 @@
         gap: rem(8);
         font-family: CeraPro;
         font-weight: 900;
-        @include adaptiveValue("font-size", 24, 16);
+        @include adaptiveValue('font-size', 24, 16);
         line-height: 1.3;
         text-transform: uppercase;
         color: #ffffff;
@@ -487,7 +481,7 @@
             background-color: #2c2c2e;
             border-radius: rem(4);
         }
-        @media (max-width: em(550)){
+        @media (max-width: em(550)) {
             align-self: start;
             gap: rem(4);
             span {
@@ -514,9 +508,16 @@
         flex-wrap: wrap;
         gap: rem(10);
         row-gap: rem(16);
-        @media (max-width:$mobileSmall){
+        @media (max-width: $mobileSmall) {
             column-gap: rem(4);
         }
+    }
+    // .game__team-picks
+    &__team-picks {
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1;
+        flex-wrap: wrap;
     }
     // .game__pick
     &__pick {
@@ -532,16 +533,27 @@
         width: rem(50);
         height: rem(30);
         border-radius: rem(4);
-        border: 2px solid #22C55E;
+        border: 2px solid #22c55e;
         overflow: hidden;
         img {
             max-width: 100%;
             max-height: rem(30);
-            object-fit: cover;
+            object-fit: fill;
         }
         &.pick-ban {
-            border: 2px solid #ED4D33;
+            border: 2px solid #ed4d33;
         }
+    }
+    // .game__player-name
+    &__player-name {
+        font-weight: 700;
+        font-size: 0.625rem;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+        margin-bottom: 15px;
+        color: #919191;
+        height: 0.7rem;
     }
     // .game__pick-team
     &__pick-team {
@@ -555,8 +567,36 @@
         img {
             max-width: 100%;
             max-height: rem(24);
-            object-fit: cover;
+            object-fit: contain;
         }
+    }
+}
+
+.hide-768 {
+    display: block;
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.hide-768-flex {
+    display: flex;
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.show-768 {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+    }
+}
+
+.show-768-grid {
+    display: none;
+    @media (max-width: $mobile) {
+        display: grid;
     }
 }
 
