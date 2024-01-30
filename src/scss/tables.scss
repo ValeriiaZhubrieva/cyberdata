@@ -56,6 +56,13 @@
             grid-template-columns: 1fr;
         }
     }
+    &.double-ellimination-10-1 {
+        grid-template-columns: 1290px 218px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 900px 150px;
+            row-gap: rem(16);
+        }
+    }
     // .playoffs__top-grid
     &__top-grid {
         .ellimination-16 & {
@@ -266,6 +273,12 @@
                 }
             }
         }
+        .double-ellimination-10-1 & {
+            grid-template-columns: repeat(5, 218px);
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(5, 150px);
+            }
+        }
     }
     // .playoffs__bottom-grid
     &__bottom-grid {
@@ -457,6 +470,30 @@
                     &:nth-child(3) {
                         padding: rem(10) 0 0 0;
                         justify-content: space-around;
+                    }
+                }
+            }
+        }
+        .double-ellimination-10-1 & {
+            grid-template-columns: repeat(5, 218px);
+            .playoffs__column {
+                &:nth-child(1) {
+                    justify-content: flex-start;
+                    padding-top: rem(125);
+                }
+                &:nth-child(2) {
+                    justify-content: flex-start;
+                    padding-top: rem(85);
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(5, 150px);
+                .playoffs__column {
+                    &:nth-child(1) {
+                        padding-top: rem(90);
+                    }
+                    &:nth-child(2) {
+                        padding-top: rem(60);
                     }
                 }
             }
@@ -743,6 +780,12 @@
         .double-ellimination-4-2 & {
             @media (max-width: $mobile) {
                 padding-top: rem(7);
+            }
+        }
+        .double-ellimination-10-1 & {
+            padding-bottom: rem(160);
+            @media (max-width:$mobile){
+                padding-bottom: rem(125);
             }
         }
     }
