@@ -63,6 +63,26 @@
             row-gap: rem(16);
         }
     }
+    &.single-ellimination-8 {
+        grid-template-columns: 515px 218px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 360px 150px;
+            row-gap: rem(16);
+        }
+    }
+    &.double-ellimination-12-2 {
+        grid-template-columns: 1290px 218px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 900px 150px;
+            row-gap: rem(16);
+        }
+    }
+    &.double-ellimination-8-5 {
+        grid-template-columns: 1fr;
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
     // .playoffs__top-grid
     &__top-grid {
         .ellimination-16 & {
@@ -277,6 +297,58 @@
             grid-template-columns: repeat(5, 218px);
             @media (max-width: $mobile) {
                 grid-template-columns: repeat(5, 150px);
+            }
+        }
+        .single-ellimination-8 & {
+            grid-template-columns: repeat(2, 218px);
+            .playoffs__column {
+                &:nth-child(2) {
+                    padding: rem(20) 0 0 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(2, 150px);
+                .playoffs__column {
+                    &:nth-child(2) {
+                        padding: rem(10) 0 0 0;
+                    }
+                }
+            }
+        }
+        .double-ellimination-12-2 & {
+            grid-template-columns: repeat(5, 218px);
+            .playoffs__column {
+                &:nth-child(1) {
+                    padding: rem(40) 0 0 0;
+                }
+                &:nth-child(3) {
+                    justify-content: space-around;
+                    padding: 0 0 rem(50) 0;
+                }
+                &:nth-child(5) {
+                    justify-content: center;
+                    padding: 0 0 rem(55) 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(5, 150px);
+                .playoffs__column {
+                    &:nth-child(1) {
+                        padding: rem(32) 0 0 0;
+                    }
+                    &:nth-child(3) {
+                        padding: 0 0 rem(40) 0;
+                    }
+                    &:nth-child(5) {
+                        padding: 0 0 rem(45) 0;
+                    }
+                }
+            }
+        }
+        .double-ellimination-8-5 & {
+            grid-template-columns: repeat(3, 218px);
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 150px);
             }
         }
     }
@@ -498,10 +570,71 @@
                 }
             }
         }
+        .single-ellimination-8 & {
+            grid-template-columns: repeat(2, 218px);
+            .playoffs__column {
+                &:nth-child(2) {
+                    padding: rem(20) 0 0 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(2, 150px);
+                .playoffs__column {
+                    &:nth-child(2) {
+                        padding: rem(10) 0 0 0;
+                    }
+                }
+            }
+        }
+        .double-ellimination-12-2 & {
+            grid-template-columns: repeat(5, 218px);
+            .playoffs__column {
+                justify-content: space-around;
+                &:nth-child(2) {
+                    justify-content: flex-start;
+                    padding: rem(85) 0 0 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(5, 150px);
+                .playoffs__column {
+                    &:nth-child(2) {
+                        padding: rem(60) 0 0 0;
+                    }
+                }
+            }
+        }
+        .double-ellimination-8-5 & {
+            grid-template-columns: repeat(3, 218px);
+            .playoffs__column {
+                justify-content: flex-start;
+                &:nth-child(1) {
+                    padding: rem(40) 0 0 0;
+                }
+                &:nth-child(3) {
+                    justify-content: center;
+                    padding: 0 0 rem(35) 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 150px);
+                .playoffs__column {
+                    &:nth-child(1) {
+                        padding: rem(30) 0 0 0;
+                    }
+                    &:nth-child(3) {
+                        padding: 0 0 rem(30) 0;
+                    }
+                }
+            }
+        }
     }
     // .playoffs__column
     &__column {
         .ellimination-16 & {
+            justify-content: flex-start;
+        }
+        .double-ellimination-12-2 & {
             justify-content: flex-start;
         }
     }
@@ -732,6 +865,20 @@
                 }
             }
         }
+        .double-ellimination-12-2 & {
+            @media (max-width: $mobile) {
+                &.center {
+                    svg {
+                        height: auto;
+                    }
+                }
+                &.bottom.center {
+                    svg {
+                        height: rem(180);
+                    }
+                }
+            }
+        }
         @media (max-width: $mobile) {
             &.small-height {
                 svg {
@@ -784,12 +931,31 @@
         }
         .double-ellimination-10-1 & {
             padding-bottom: rem(160);
-            @media (max-width:$mobile){
+            @media (max-width: $mobile) {
                 padding-bottom: rem(125);
             }
         }
+        .single-ellimination-8 & {
+            padding-top: rem(20);
+            @media (max-width: $mobile) {
+                padding-top: rem(10);
+            }
+        }
+        .double-ellimination-12-2 & {
+            padding-top: rem(30);
+        }
     }
     // .playoffs__line
-    &__line {
+    &__line-2 {
+        position: absolute;
+        left: -10%;
+        bottom: 15%;
+        @media (max-width: $mobile) {
+            bottom: 16%;
+            left: -12%;
+            svg {
+                height: 32px;
+            }
+        }
     }
 }
