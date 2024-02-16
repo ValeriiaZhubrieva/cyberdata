@@ -1,0 +1,294 @@
+.table-rounds {
+    display: grid;
+    width: 100%;
+    &:not(:last-child) {
+        margin-bottom: rem(30);
+    }
+    // .table-rounds__inner
+    &__inner {
+        display: grid;
+        width: 100%;
+        overflow-x: auto;
+    }
+    // .table-rounds__head
+    &__head {
+    }
+    // .table-rounds__body
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: rem(4);
+    }
+    // .table-rounds__teams
+    &__teams {
+    }
+    // .table-rounds__info
+    &__info {
+    }
+}
+.head-table-rounds {
+    border-radius: rem(10);
+    background-color: #1d1d1e;
+    margin-bottom: rem(20);
+    padding: rem(20) 0;
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 102px);
+    gap: rem(4);
+    // .head-table-rounds__item
+    &__item {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 120%;
+        color: #919191;
+    }
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr repeat(7, 60px);
+    }
+}
+.team-round {
+    display: grid;
+    gap: rem(4);
+    // .team-round__row
+    &__row {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap", 20, 4, 0, $containerWidth, 767.98);
+        border-radius: rem(4);
+        @include adaptiveValue("padding", 20, 10);
+        &.green-color {
+            background: linear-gradient(90deg, rgba(101, 215, 143, 0.3) 0%, rgba(101, 215, 143, 0) 100%);
+        }
+        &.yellow-color {
+            background: linear-gradient(90deg, rgba(252, 232, 125, 0.4) 0%, rgba(252, 232, 125, 0) 100%);
+        }
+        &.red-color {
+            background: linear-gradient(90deg, rgba(241, 129, 111, 0.4) 0%, rgba(241, 129, 111, 0) 100%);
+        }
+    }
+    // .team-round__number
+    &__number {
+        display: grid;
+        place-content: center;
+        width: rem(22);
+        height: rem(22);
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 110%;
+        text-align: center;
+        color: #fff;
+    }
+    // .team-round__img
+    &__img {
+        flex-shrink: 0;
+        width: rem(40);
+        height: rem(40);
+        padding: rem(5);
+        display: grid;
+        place-content: center;
+        border-radius: rem(4);
+        background-color: #fff;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    // .team-round__name
+    &__name {
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 130%;
+        word-wrap: break-word;
+        word-break: break-word;
+        @media (max-width: em(1299.98)) {
+            display: none;
+        }
+        @media (max-width: em(1229.98)) {
+            display: block;
+        }
+        @media (max-width: $tablet) {
+            display: none;
+        }
+        @media (max-width:$mobile){
+            display: block;
+            font-size: rem(12);
+        }
+        @media (max-width: em(669.98)){
+            display: none;
+        }
+    }
+}
+.rounds-grid {
+    display: grid;
+    gap: rem(4);
+    // .rounds-grid__row
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(7, 102px);
+        gap: rem(4);
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(7, 60px);
+        }
+    }
+    // .rounds-grid__item
+    &__item {
+        display: grid;
+        place-content: center;
+        gap: rem(4);
+        border-radius: rem(4);
+        background-color: #202020;
+        padding: rem(5);
+        @media (max-width:$mobile){
+            padding: rem(4);
+            gap: rem(3);
+        }
+    }
+    // .rounds-grid__text
+    &__text {
+        font-weight: 700;
+        font-size: rem(20);
+        text-align: center;
+        line-height: 130%;
+        color: rgba(#fff, 0.6);
+        @media (max-width: $mobile) {
+            font-size: rem(16);
+        }
+    }
+    // .rounds-grid__matches
+    &__matches {
+        display: grid;
+        place-content: center;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 20, 15);
+        line-height: 130%;
+        text-align: center;
+        background-color: #343437;
+    }
+    // .rounds-grid__games
+    &__games {
+        display: grid;
+        place-content: center;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 20, 15);
+        line-height: 130%;
+        text-align: center;
+        background-color: #343437;
+    }
+    // .rounds-grid__unknown
+    &__unknown {
+    }
+    // .rounds-grid__time
+    &__time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(5);
+        font-weight: 700;
+        font-size: rem(12);
+        line-height: 130%;
+        color: rgba(#fff, 0.6);
+    }
+    // .rounds-grid__team
+    &__team {
+        margin: 0 auto;
+        width: rem(28);
+        height: rem(28);
+        padding: rem(4);
+        border-radius: rem(4);
+        display: grid;
+        place-content: center;
+        background-color: #fff;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        @media (max-width: $mobile) {
+            width: rem(21);
+            height: rem(21);
+        }
+    }
+    // .rounds-grid__date
+    &__date {
+        font-weight: 700;
+        font-size: rem(10);
+        line-height: 130%;
+        text-align: center;
+        color: rgba(#fff, 0.6);
+        @media (max-width: $mobile) {
+            font-size: rem(8);
+        }
+    }
+    // .rounds-grid__will
+    &__will {
+        background-color: #38436c;
+    }
+    // .rounds-grid__live
+    &__live {
+        background-color: #266573;
+        .rounds-grid__time {
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(10);
+            width: 100%;
+            @media (max-width: $mobile) {
+                gap: 5;
+            }
+        }
+    }
+    // .rounds-grid__indicator
+    &__indicator {
+        display: flex;
+        align-items: center;
+        gap: rem(3);
+        font-weight: 700;
+        font-size: rem(8);
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        &::before {
+            content: "";
+            flex-shrink: 0;
+            width: rem(9);
+            height: rem(9);
+            background-color: #3b9c71;
+            border-radius: 50%;
+        }
+        span {
+            border: 1px solid #3b9c71;
+            padding: 0 rem(3.5);
+        }
+        @media (max-width: $mobile) {
+            span {
+                display: none;
+            }
+        }
+    }
+    // .rounds-grid__result
+    &__result {
+        background-color: #3b6d57;
+        .rounds-grid__team {
+            width: rem(43);
+            height: rem(43);
+            @media (max-width: $mobile) {
+                width: rem(30);
+                height: rem(30);
+            }
+        }
+    }
+    // .rounds-grid__score
+    &__score {
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 100%;
+        text-align: center;
+        color: #fff;
+        @media (max-width:$mobile){
+            font-size: rem(16);
+        }
+    }
+}

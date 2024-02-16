@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('html/_head.htm',{
+"title":"Турнір"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page__tournament">
+			<div class="tournament__breadcrumbs breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M5.6237 16.0419H14.3737C15.2942 16.0419 16.0404 15.2957 16.0404 14.3752V8.1252L9.9987 3.95853L3.95703 8.1252V14.3752C3.95703 15.2957 4.70322 16.0419 5.6237 16.0419Z"
+										stroke="#919191" stroke-opacity="0.568627" stroke-width="1.5"
+										stroke-linecap="round" stroke-linejoin="round" />
+									<path
+										d="M8.12319 13.1244C8.12319 12.2039 8.86938 11.4577 9.78986 11.4577H10.2065C11.127 11.4577 11.8732 12.2039 11.8732 13.1244V16.0411H8.12319V13.1244Z"
+										stroke="#919191" stroke-opacity="0.568627" stroke-width="1.5"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">
+								Турніри
+							</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__span">ESL One Berlin Major 2023</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section class="tournament">
+				<div class="tournament__container">
+					<div class="tournament__body">
+						<aside class="tournament__aside aside-navigaton">
+							<ul class="aside-navigaton__list">
+								<li class="aside-navigaton__item">
+									<a href="#" class="aside-navigaton__link">
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+										<span>Груповий етап</span>
+									</a>
+									<ul class="aside-navigaton__sublist">
+										<li class="aside-navigaton__subitem">
+											<a href="#" class="aside-navigaton__sublink">
+												Таблиця групи А
+											</a>
+										</li>
+										<li class="aside-navigaton__subitem">
+											<a href="#" class="aside-navigaton__sublink">
+												Таблиця групи Б
+											</a>
+										</li>
+										<li class="aside-navigaton__subitem">
+											<a href="#" class="aside-navigaton__sublink">
+												Перегравання групи А за 5 - 7 місця
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="aside-navigaton__item">
+									<a href="#" class="aside-navigaton__link">
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+										<span>Стадія плей-офф</span>
+									</a>
+									<ul class="aside-navigaton__sublist">
+										<li class="aside-navigaton__subitem">
+											<a href="#" class="aside-navigaton__sublink">
+												Гранд-фінал
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="aside-navigaton__item">
+									<a href="#" class="aside-navigaton__link">
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+										<span>Інформація про турнір</span>
+									</a>
+								</li>
+								<li class="aside-navigaton__item">
+									<a href="#" class="aside-navigaton__link">
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+										<span>Учасники</span>
+									</a>
+								</li>
+								<li class="aside-navigaton__item">
+									<a href="#" class="aside-navigaton__link">
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+										<span>Результати та призові</span>
+									</a>
+								</li>
+								<li class="aside-navigaton__item">
+									<a href="#" class="aside-navigaton__link">
+										<svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 2L7.72057 8L2 2" stroke="#919191" stroke-width="3" />
+										</svg>
+										<span>Матчі</span>
+									</a>
+								</li>
+							</ul>
+						</aside>
+						<div class="tournament__content">
+							<div class="table-rounds">
+								<div class="table-rounds__inner">
+									<div class="table-rounds__head head-table-rounds">
+										<div class="head-table-rounds__item"></div>
+										<div class="head-table-rounds__item">Матчі</div>
+										<div class="head-table-rounds__item">Ігри</div>
+										<div class="head-table-rounds__item">Round 1</div>
+										<div class="head-table-rounds__item">Round 2</div>
+										<div class="head-table-rounds__item">Round 3</div>
+										<div class="head-table-rounds__item">Round 4</div>
+										<div class="head-table-rounds__item">Round 5</div>
+									</div>
+									<div class="table-rounds__body">
+										<div class="table-rounds__teams team-round">
+											<div class="team-round__row green-color">
+												<div class="team-round__number">
+													1
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row green-color">
+												<div class="team-round__number">
+													2
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row green-color">
+												<div class="team-round__number">
+													3
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row green-color">
+												<div class="team-round__number">
+													4
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row green-color">
+												<div class="team-round__number">
+													5
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row green-color">
+												<div class="team-round__number">
+													6
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row yellow-color">
+												<div class="team-round__number">
+													7
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row yellow-color">
+												<div class="team-round__number">
+													8
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row yellow-color">
+												<div class="team-round__number">
+													9
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row yellow-color">
+												<div class="team-round__number">
+													10
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row yellow-color">
+												<div class="team-round__number">
+													11
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row yellow-color">
+												<div class="team-round__number">
+													12
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row red-color">
+												<div class="team-round__number">
+													13
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row red-color">
+												<div class="team-round__number">
+													14
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row red-color">
+												<div class="team-round__number">
+													15
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+											<div class="team-round__row red-color">
+												<div class="team-round__number">
+													16
+												</div>
+												<div class="team-round__img">
+													<img src="@img/index-teams/team-images-1.jpg" alt="team-images">
+												</div>
+												<div class="team-round__name">
+													Team Liquid
+												</div>
+											</div>
+										</div>
+										<div class="table-rounds__info rounds-grid">
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+											<div class="rounds-grid__row">
+												<div class="rounds-grid__item rounds-grid__matches">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__games">
+													6:0
+												</div>
+												<div class="rounds-grid__item rounds-grid__unknown">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__text">
+														?
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__will">
+													<div class="rounds-grid__time">
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item rounds-grid__live">
+													<div class="rounds-grid__time">
+														<div class="rounds-grid__indicator">
+															<span>live</span>
+														</div>
+														<span>15:30</span>
+													</div>
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__date">
+														28.04.2023
+													</div>
+												</div>
+												<div class="rounds-grid__item"></div>
+												<div class="rounds-grid__item rounds-grid__result">
+													<div class="rounds-grid__team">
+														<img src="@img/index-teams/team-images-12.jpg" alt="team-images">
+													</div>
+													<div class="rounds-grid__score">
+														2:0
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

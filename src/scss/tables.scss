@@ -83,6 +83,13 @@
             grid-template-columns: 1fr;
         }
     }
+    &.single-ellimination-16 {
+        grid-template-columns: 773px 218px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 540px 150px;
+            row-gap: rem(16);
+        }
+    }
     // .playoffs__top-grid
     &__top-grid {
         .ellimination-16 & {
@@ -346,6 +353,12 @@
             }
         }
         .double-ellimination-8-5 & {
+            grid-template-columns: repeat(3, 218px);
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 150px);
+            }
+        }
+        .single-ellimination-16 & {
             grid-template-columns: repeat(3, 218px);
             @media (max-width: $mobile) {
                 grid-template-columns: repeat(3, 150px);
@@ -628,6 +641,18 @@
                 }
             }
         }
+        .single-ellimination-16 & {
+            grid-template-columns: repeat(3, 218px);
+            .playoffs__column {
+                &:nth-child(3) {
+                    justify-content: space-around;
+                    padding: 0;
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 150px);
+            }
+        }
     }
     // .playoffs__column
     &__column {
@@ -875,6 +900,20 @@
                 &.bottom.center {
                     svg {
                         height: rem(180);
+                    }
+                }
+            }
+        }
+        .single-ellimination-16 & {
+            @media (max-width:$mobile){
+                &.final {
+                    svg {
+                        height: 241px;
+                    }
+                }
+                &.bottom.final {
+                    svg {
+                        height: 231px;
                     }
                 }
             }
